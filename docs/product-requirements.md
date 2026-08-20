@@ -5,6 +5,8 @@
 - Status: Freigegeben
 - Freigabe: persönlich am 2026-08-20 durch den Entwickler
 - Grundlage: freigegebene `docs/idea-validation.md` vom 2026-08-20
+- GitHub-Status: Ergebnis-Commit `2bb2ab738cbdc5ca9616bf9ecd58dce3d40f42c7` auf `main` veröffentlicht und am 2026-08-20 remote verifiziert
+- Integration: direkt auf `main`; Pull Request nicht verwendet
 - Stand: 2026-08-20
 
 ## Produktvision

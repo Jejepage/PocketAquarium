@@ -14,11 +14,11 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Produktbeschreibung / PRD
+Funktions- und UI-Plan
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Nicht begonnen
 
 ## Zuletzt aktualisiert
 
@@ -26,11 +26,11 @@ Bereit zum GitHub-Abschluss
 
 ## Aktueller Auftrag
 
-Aus der freigegebenen Ideenvalidierung einen kompakten, verbindlichen und technikneutralen PRD-Entwurf für die erste Version erstellen.
+Die freigegebenen Produktanforderungen in einen Funktions- und UI-Plan für die erste Version überführen.
 
 ## Erforderliche Eingangsdokumente
 
-- [x] freigegebene `docs/idea-validation.md`
+- [x] freigegebene `docs/product-requirements.md`
 
 ## Erledigt
 
@@ -50,7 +50,7 @@ Aus der freigegebenen Ideenvalidierung einen kompakten, verbindlichen und techni
 
 ## Offen
 
-- GitHub-Abschluss für die freigegebene Phase `Produktbeschreibung / PRD` durchführen
+- Phase `Funktions- und UI-Plan` mit der freigegebenen `docs/product-requirements.md` beginnen
 
 ## Bekannte Probleme oder Blocker
 
@@ -99,20 +99,22 @@ Aus der freigegebenen Ideenvalidierung einen kompakten, verbindlichen und techni
 - Pull Request: Nicht verwendet
 - Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
 
-## Geplanter GitHub-Abschluss
+## Abgeschlossener Abschnitt
 
 - Abschnitt: Phase `Produktbeschreibung / PRD`
+- Status: Abgeschlossen
 - Persönliche Freigabe: 2026-08-20, freigegeben durch den Entwickler
-- Abschlussdateien: `docs/product-requirements.md` und `STATUS.md`
+- Ergebnis-Commit: `2bb2ab738cbdc5ca9616bf9ecd58dce3d40f42c7` (`docs(phase-02): approve product requirements`)
 - Branch und Zielbranch: `main` nach `main`
+- Push und Integration: 2026-08-20 auf `origin/main` gepusht und per `git ls-remote` bestätigt
 - Pull Request: Nicht verwendet
-- Prüfungen: PRD-Struktur, Rückverfolgbarkeit, Umfangstrennung, Konsistenzprüfung und `git diff --check`
+- Prüfungen: PRD-Struktur, Rückverfolgbarkeit, Umfangstrennung, Konsistenzprüfung, `git diff --check` und gestagtes `git diff --cached --check`
 - Bekannte Einschränkungen: Keine
 - Nächster Abschnitt: `Funktions- und UI-Plan`; erforderliche Eingabe: freigegebene `docs/product-requirements.md`
 
 ## Nächster Schritt
 
-Ergebnis-Commit für den freigegebenen PRD erstellen, auf `main` pushen und remote prüfen. Danach Abschlussdokumentation committen und die nächste Phase freigeben.
+Vor Beginn die Rollendatei `agents/03-functional-ui-plan.md` sowie die freigegebene `docs/product-requirements.md` vollständig lesen und den Status auf `In Bearbeitung` setzen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -122,8 +124,8 @@ Ergebnis-Commit für den freigegebenen PRD erstellen, auf `main` pushen und remo
 - Vor einem Phasenwechsel sind die persönliche Freigabe und ein erfolgreich verfügbarer GitHub-Stand erforderlich.
 - Zum Ergebnis-Commit gehören `docs/idea-validation.md`, `STATUS.md` und die bereits bereitgestellte Workflow-Grundlage dieses neuen Projekts.
 - Die Phase `Idee und Problemvalidierung` ist persönlich freigegeben und fachlich abgeschlossen.
-- Aktuelle Rollendatei: `agents/02-product-requirements.md`.
-- Der PRD-Entwurf ist geprüft und bereit zur persönlichen Abnahme; technische und UI-Detailentscheidungen bleiben der nächsten Phase vorbehalten.
+- Die Phase `Produktbeschreibung / PRD` ist persönlich freigegeben und mit dem Ergebnis-Commit `2bb2ab738cbdc5ca9616bf9ecd58dce3d40f42c7` auf GitHub abgeschlossen.
+- Nächste Rollendatei: `agents/03-functional-ui-plan.md`.
 
 ## Zulässige Statuswerte
 
