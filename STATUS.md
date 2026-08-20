@@ -14,11 +14,11 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Implementierungsplan
+Implementierung – Etappe 1: Lebendige Grundszene
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Nicht begonnen
 
 ## Zuletzt aktualisiert
 
@@ -26,13 +26,15 @@ Bereit zum GitHub-Abschluss
 
 ## Aktueller Auftrag
 
-Die drei freigegebenen Planungsdokumente in kleine, prüfbare Umsetzungsetappen für die erste Version zerlegen.
+Die freigegebene Etappe 1 `Lebendige Grundszene` gemäß ihrer Etappendatei umsetzen.
 
 ## Erforderliche Eingangsdokumente
 
 - [x] freigegebene `docs/product-requirements.md`
 - [x] freigegebene `docs/functional-plan.md`
 - [x] freigegebene `docs/technical-plan.md`
+- [x] freigegebene `docs/implementation-plan.md`
+- [x] `docs/stages/01-lebendige-grundszene.md`
 
 ## Erledigt
 
@@ -62,7 +64,7 @@ Die drei freigegebenen Planungsdokumente in kleine, prüfbare Umsetzungsetappen 
 
 ## Offen
 
-- GitHub-Abschluss der freigegebenen Phase `Implementierungsplan` durchführen
+- Etappe 1 implementieren und anschließend unabhängig prüfen lassen
 
 ## Bekannte Probleme oder Blocker
 
@@ -130,11 +132,24 @@ Die drei freigegebenen Planungsdokumente in kleine, prüfbare Umsetzungsetappen 
 ## GitHub-Stand
 
 - Branch: `main`; Zielbranch: `main`
-- Ergebnis-Commit: `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` (`docs(phase-04): approve technical plan`)
-- Letzter Ergebnis-Push: 2026-08-20 09:57 CEST; auf GitHub per `git ls-remote` bestätigt
-- Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation wird im nachfolgenden Abschluss-Commit auf `main` gepusht (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
+- Ergebnis-Commit: `55dfe1f794e5b4e63888248cfe5e55c59a11899b` (`docs(phase-05): approve implementation plan`)
+- Letzter Ergebnis-Push: 2026-08-20 10:35 CEST; auf GitHub per `git ls-remote` bestätigt
+- Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation wird mit diesem nachgelagerten Commit auf `main` gepusht (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
 - Pull Request: Nicht verwendet
 - Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
+
+## Abgeschlossener Abschnitt
+
+- Abschnitt: Phase `Implementierungsplan`
+- Status: Abgeschlossen
+- Persönliche Freigabe: 2026-08-20, freigegeben durch den Entwickler
+- Ergebnis-Commit: `55dfe1f794e5b4e63888248cfe5e55c59a11899b` (`docs(phase-05): approve implementation plan`)
+- Branch und Zielbranch: `main` nach `main`
+- Push und Integration: 2026-08-20 10:35 CEST auf `origin/main` gepusht und per `git ls-remote` bestätigt
+- Pull Request: Nicht verwendet
+- Prüfungen: vollständige freigegebene Eingangsdokumente, Abdeckungsmatrix F-01 bis F-05 und AC-F01-01 bis AC-F05-02, Etappenstrukturen, Abhängigkeitsreihenfolge, GitHub-Pages-Vorgabe, `git diff --check` und gestagtes `git diff --cached --check`
+- Bekannte Einschränkungen: GitHub Pages wird erst in der Release-Phase aktiviert; bei weiterhin privatem Repository ist die verfügbare Sichtbarkeitsoption vor Aktivierung zu prüfen
+- Nächster Abschnitt: `Implementierung – Etappe 1: Lebendige Grundszene`; erforderliche Eingaben: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md` und `docs/stages/01-lebendige-grundszene.md`
 
 ## Abgeschlossener Abschnitt
 
@@ -177,7 +192,7 @@ Die drei freigegebenen Planungsdokumente in kleine, prüfbare Umsetzungsetappen 
 
 ## Nächster Schritt
 
-Den aktualisierten Entwurf `docs/implementation-plan.md` und die vier Etappendateien persönlich freigeben. Er umfasst GitHub Pages als verbindlichen Veröffentlichungsweg in der späteren Release-Phase. Danach den GitHub-Abschluss der Planungsphase durchführen und erst anschließend zu `Implementierung – Etappe 1: Lebendige Grundszene` wechseln.
+Vor Beginn die Rollendatei `agents/06-implementation.md`, die fünf freigegebenen Planungsdokumente und `docs/stages/01-lebendige-grundszene.md` vollständig lesen; danach den Status auf `In Bearbeitung` setzen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -190,9 +205,9 @@ Den aktualisierten Entwurf `docs/implementation-plan.md` und die vier Etappendat
 - Die Phase `Produktbeschreibung / PRD` ist persönlich freigegeben und mit dem Ergebnis-Commit `2bb2ab738cbdc5ca9616bf9ecd58dce3d40f42c7` auf GitHub abgeschlossen.
 - Die Phase `Funktions- und UI-Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `0c42dd3dc88c7009ad86cc2796e1764fb55e1e09` auf GitHub abgeschlossen.
 - Die Phase `Technischer Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf GitHub abgeschlossen.
-- Nächste Rollendatei: `agents/05-implementation-plan.md`.
-- Erforderliche Eingaben für die nächste Phase: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md` und `docs/technical-plan.md`.
-- Der Implementierungsplan ist als Entwurf bereit zur persönlichen Abnahme; die vier Etappen sind `01-lebendige-grundszene`, `02-szenengesten`, `03-sichtbares-fuettern` und `04-robuste-uebergabe`.
+- Der Implementierungsplan ist freigegeben und mit dem Ergebnis-Commit `55dfe1f794e5b4e63888248cfe5e55c59a11899b` auf GitHub verfügbar; die vier Etappen sind `01-lebendige-grundszene`, `02-szenengesten`, `03-sichtbares-fuettern` und `04-robuste-uebergabe`.
+- Nächste Rollendatei: `agents/06-implementation.md`.
+- Erforderliche Eingaben für die nächste Etappe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md` und `docs/stages/01-lebendige-grundszene.md`.
 - GitHub Pages ist für die finale Veröffentlichung festgelegt: `index.html` aus `main` und `/ (root)`; die tatsächliche Aktivierung und URL-Prüfung gehören zur Release-Phase.
 - Die GitHub-Pages-Vorgabe wurde am 2026-08-20 direkt durch den Entwickler ergänzt; bei einem weiterhin privaten Repository ist vor Aktivierung die von GitHub angebotene Sichtbarkeitsoption zu prüfen und erforderlichenfalls erneut bestätigen zu lassen.
 

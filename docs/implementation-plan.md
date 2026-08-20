@@ -4,6 +4,7 @@
 
 - Status: Freigegeben
 - Freigabe: persönlich am 2026-08-20 durch den Entwickler
+- GitHub-Status: Ergebnis-Commit `55dfe1f794e5b4e63888248cfe5e55c59a11899b` auf `main` veröffentlicht und am 2026-08-20 remote verifiziert; Abschlussdokumentation folgt im nachgelagerten Status-Commit.
 - Grundlage: die freigegebenen Produkt-, Funktions-/UI- und technischen Pläne vom 2026-08-20
 - Lieferform: genau eine eigenständig lauffähige `index.html` ohne Abhängigkeiten, Laufzeit-Netzwerk, Speicherung oder Berechtigungen; Veröffentlichung im Release über GitHub Pages aus `main` und `/ (root)`
 
