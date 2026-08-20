@@ -18,7 +18,7 @@ Implementierungsplan
 
 ## Status
 
-Abgeschlossen
+Bereit zum GitHub-Abschluss
 
 ## Zuletzt aktualisiert
 
@@ -26,12 +26,13 @@ Abgeschlossen
 
 ## Aktueller Auftrag
 
-Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan für die erste Version überführen.
+Die drei freigegebenen Planungsdokumente in kleine, prüfbare Umsetzungsetappen für die erste Version zerlegen.
 
 ## Erforderliche Eingangsdokumente
 
 - [x] freigegebene `docs/product-requirements.md`
 - [x] freigegebene `docs/functional-plan.md`
+- [x] freigegebene `docs/technical-plan.md`
 
 ## Erledigt
 
@@ -55,10 +56,13 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 - Drei Startfische und ein Szenenlimit von sechs Fischen als reversible, lesbarkeitswahrende Umsetzungsentscheidung dokumentiert
 - OD-01 persönlich entschieden: Unterstützung der jeweils aktuellen stabilen Evergreen-Versionen von Safari, Chrome, Edge und Firefox (Option A)
 - Technischen Plan am 2026-08-20 persönlich durch den Entwickler freigegeben
+- Eingangsdokumente für den Implementierungsplan vollständig gelesen und ohne Widersprüche oder offene Entscheidungen geprüft
+- Entwurf eines vierteiligen Implementierungsplans samt Etappendateien erstellt
+- Implementierungsplan mit den vier Etappen am 2026-08-20 persönlich durch den Entwickler freigegeben
 
 ## Offen
 
-- Nächste Phase `Implementierungsplan` mit den drei freigegebenen Planungsdokumenten beginnen
+- GitHub-Abschluss der freigegebenen Phase `Implementierungsplan` durchführen
 
 ## Bekannte Probleme oder Blocker
 
@@ -73,6 +77,7 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 - Integration erfolgt für die initiale Dokumentationsphase direkt auf dem Zielbranch `main`; ein Pull Request wird nicht verwendet
 - Das neu einzurichtende GitHub-Repository wird zunächst privat angelegt
 - Technischer Plan verwendet Canvas 2D, natives JavaScript und Pointer Events ohne Framework oder externe Ressourcen; Browser-Kompatibilität ist auf aktuelle stabile Evergreen-Versionen festgelegt
+- Veröffentlichung: Die finale `index.html` wird in der Release-Phase über GitHub Pages aus `main` und `/ (root)` publiziert; eine eigene Domain ist nicht vorgesehen
 
 ## Ausgeführte Prüfungen
 
@@ -97,6 +102,14 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 - Kernumfang, spätere Optionen und Nicht-Ziele getrennt geprüft
 - Erfolgskriterien auf Beobachtbarkeit ohne erfundene Zielwerte geprüft
 - PRD auf Konsistenz mit der Ideenvalidierung sowie auf fehlende technische und detaillierte UI-Vorentscheidungen geprüft
+- Arbeitsstand mit `git diff --check` auf Whitespacefehler geprüft
+- GitHub-Pages-Vorgabe auf die Ein-Datei-Lieferform, Datenschutzgrenzen und die geplante Release-Phase abgeglichen
+- Persönliche Freigabe des Implementierungsplans am 2026-08-20 dokumentiert
+- Arbeitsbeginn für Phase `Implementierungsplan` am 2026-08-20 dokumentiert
+- Implementierungsplan auf vier vertikale, jeweils browserseitig prüfbare Etappen geprüft
+- Vollständige Abdeckung von F-01 bis F-05 und AC-F01-01 bis AC-F05-02 durch genau eine Umsetzungsetappe geprüft
+- Etappendateien auf alle vorgeschriebenen Abschnitte, konkrete Prüfwege, bewusste Ausschlüsse und Abschlussbedingungen geprüft
+- Reihenfolge gegen die Abhängigkeiten Canvas/Simulation, Gesten, Fütterungszustand und Gesamtrobustheit geprüft
 - Arbeitsstand mit `git diff --check` auf Whitespacefehler geprüft
 - Persönliche Freigabe des technischen Plans sowie Option A für OD-01 am 2026-08-20 dokumentiert
 - Freigegebenes PRD auf stabile Funktionskennungen, dokumentierte offene Entscheidungen und erfolgreichen GitHub-Abschluss geprüft
@@ -164,7 +177,7 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 
 ## Nächster Schritt
 
-Vor Beginn die Rollendatei `agents/05-implementation-plan.md` sowie die drei freigegebenen Planungsdokumente vollständig lesen und den Status auf `In Bearbeitung` setzen.
+Den aktualisierten Entwurf `docs/implementation-plan.md` und die vier Etappendateien persönlich freigeben. Er umfasst GitHub Pages als verbindlichen Veröffentlichungsweg in der späteren Release-Phase. Danach den GitHub-Abschluss der Planungsphase durchführen und erst anschließend zu `Implementierung – Etappe 1: Lebendige Grundszene` wechseln.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -179,6 +192,9 @@ Vor Beginn die Rollendatei `agents/05-implementation-plan.md` sowie die drei fre
 - Die Phase `Technischer Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf GitHub abgeschlossen.
 - Nächste Rollendatei: `agents/05-implementation-plan.md`.
 - Erforderliche Eingaben für die nächste Phase: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md` und `docs/technical-plan.md`.
+- Der Implementierungsplan ist als Entwurf bereit zur persönlichen Abnahme; die vier Etappen sind `01-lebendige-grundszene`, `02-szenengesten`, `03-sichtbares-fuettern` und `04-robuste-uebergabe`.
+- GitHub Pages ist für die finale Veröffentlichung festgelegt: `index.html` aus `main` und `/ (root)`; die tatsächliche Aktivierung und URL-Prüfung gehören zur Release-Phase.
+- Die GitHub-Pages-Vorgabe wurde am 2026-08-20 direkt durch den Entwickler ergänzt; bei einem weiterhin privaten Repository ist vor Aktivierung die von GitHub angebotene Sichtbarkeitsoption zu prüfen und erforderlichenfalls erneut bestätigen zu lassen.
 
 ## Zulässige Statuswerte
 

@@ -3,7 +3,7 @@
 ## Status und Freigabe
 
 - Status: Freigegeben.
-- Freigabe: persönlich am 2026-08-20 durch den Entwickler; OD-01 mit Option A bestätigt.
+- Freigabe: persönlich am 2026-08-20 durch den Entwickler; OD-01 mit Option A bestätigt. GitHub Pages als Veröffentlichungsweg am 2026-08-20 durch den Entwickler ergänzt.
 - GitHub-Status: Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf `main` veröffentlicht und am 2026-08-20 remote verifiziert; Abschlussdokumentation folgt im nachgelagerten Status-Commit.
 - Grundlage: die freigegebenen `docs/product-requirements.md` und `docs/functional-plan.md`, jeweils vom 2026-08-20.
 - Abruf technischer Quellen: 2026-08-20.
@@ -104,11 +104,11 @@ Automatisierte Browser-Tests sind für die einzelne statische Datei optional; de
 
 ## Build, Konfiguration und Veröffentlichung
 
-Kein Build-Schritt: die HTML-Datei ist das Artefakt. Vor Veröffentlichung wird sie über einen statischen HTTPS-Host oder als direkte Datei gemäß der gewählten Browsergrenze geprüft. Ein Hostinganbieter ist noch nicht ausgewählt und für die technische Planung nicht nötig; die Veröffentlichung darf keine Drittanbieter-Skripte ergänzen. Die finale Datei wird versionskontrolliert ausgeliefert, mit Browser-Smoke-Tests vor dem Release.
+Kein Build-Schritt: `index.html` im Repository-Stamm ist das Artefakt. Die Veröffentlichung erfolgt im Release über GitHub Pages aus dem Zielbranch `main` und dem Verzeichnis `/ (root)`; eine eigene Domain ist nicht Teil von V1. Vor der Aktivierung wird die Datei lokal und über die erzeugte HTTPS-Adresse gemäß der gewählten Browsergrenze geprüft. Die Veröffentlichung darf keine Drittanbieter-Skripte ergänzen. Falls die Sichtbarkeit des gegenwärtig privaten Repositorys den öffentlichen Zugriff auf GitHub Pages verhindert, ist die erforderliche Repository- oder Pages-Sichtbarkeitsentscheidung vor der Aktivierung vom Entwickler zu bestätigen.
 
 ## Abhängigkeiten, Lizenzen und laufende Kosten
 
-Keine Laufzeit- oder Build-Abhängigkeiten, daher keine zusätzlichen Lizenzen oder laufenden Kosten. Hosting ist für die lokale, direkt ausführbare Lieferform nicht erforderlich; falls später öffentlich gehostet wird, ist Anbieter, Preis und Datenschutzeinfluss vorab separat zu entscheiden.
+Keine Laufzeit- oder Build-Abhängigkeiten, daher keine zusätzlichen Lizenzen oder laufenden Kosten. GitHub Pages ist der festgelegte Hostingweg; seine Verfügbarkeit und mögliche Tarifauswirkungen für ein privates Repository werden vor der Release-Aktivierung geprüft. Die Seite benötigt keine Cookies, externe Ressourcen oder Nutzerübertragung.
 
 ## Risiken und bewusste Kompromisse
 
