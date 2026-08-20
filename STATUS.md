@@ -14,11 +14,11 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Funktions- und UI-Plan
+Technischer Plan
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Nicht begonnen
 
 ## Zuletzt aktualisiert
 
@@ -26,11 +26,12 @@ Bereit zum GitHub-Abschluss
 
 ## Aktueller Auftrag
 
-Die freigegebenen Produktanforderungen in einen Funktions- und UI-Plan für die erste Version überführen.
+Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan für die erste Version überführen.
 
 ## Erforderliche Eingangsdokumente
 
 - [x] freigegebene `docs/product-requirements.md`
+- [x] freigegebene `docs/functional-plan.md`
 
 ## Erledigt
 
@@ -52,7 +53,7 @@ Die freigegebenen Produktanforderungen in einen Funktions- und UI-Plan für die 
 
 ## Offen
 
-- GitHub-Abschluss für die freigegebene Phase `Funktions- und UI-Plan` durchführen
+- Phase `Technischer Plan` mit den freigegebenen Eingabedokumenten beginnen
 
 ## Bekannte Probleme oder Blocker
 
@@ -122,12 +123,14 @@ Die freigegebenen Produktanforderungen in einen Funktions- und UI-Plan für die 
 - Bekannte Einschränkungen: Keine
 - Nächster Abschnitt: `Funktions- und UI-Plan`; erforderliche Eingabe: freigegebene `docs/product-requirements.md`
 
-## Geplanter GitHub-Abschluss
+## Abgeschlossener Abschnitt
 
 - Abschnitt: Phase `Funktions- und UI-Plan`
+- Status: Abgeschlossen
 - Persönliche Freigabe: 2026-08-20, freigegeben durch den Entwickler
-- Abschlussdateien: `docs/functional-plan.md` und `STATUS.md`
+- Ergebnis-Commit: `0c42dd3dc88c7009ad86cc2796e1764fb55e1e09` (`docs(phase-03): approve functional UI plan`)
 - Branch und Zielbranch: `main` nach `main`
+- Push und Integration: 2026-08-20 auf `origin/main` gepusht und per `git ls-remote` bestätigt
 - Pull Request: Nicht verwendet
 - Prüfungen: PRD-Rückverfolgbarkeit, vollständige Abläufe, Zustände, Barrierefreiheit, Akzeptanzkriterien und `git diff --check`
 - Bekannte Einschränkungen: Keine
@@ -135,7 +138,7 @@ Die freigegebenen Produktanforderungen in einen Funktions- und UI-Plan für die 
 
 ## Nächster Schritt
 
-Ergebnis-Commit für den freigegebenen Funktions- und UI-Plan erstellen, auf `main` pushen und remote prüfen. Danach Abschlussdokumentation committen und die nächste Phase freigeben.
+Vor Beginn die Rollendatei `agents/04-technical-plan.md` sowie die freigegebenen Eingabedokumente vollständig lesen und den Status auf `In Bearbeitung` setzen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -146,8 +149,8 @@ Ergebnis-Commit für den freigegebenen Funktions- und UI-Plan erstellen, auf `ma
 - Zum Ergebnis-Commit gehören `docs/idea-validation.md`, `STATUS.md` und die bereits bereitgestellte Workflow-Grundlage dieses neuen Projekts.
 - Die Phase `Idee und Problemvalidierung` ist persönlich freigegeben und fachlich abgeschlossen.
 - Die Phase `Produktbeschreibung / PRD` ist persönlich freigegeben und mit dem Ergebnis-Commit `2bb2ab738cbdc5ca9616bf9ecd58dce3d40f42c7` auf GitHub abgeschlossen.
-- Nächste Rollendatei: `agents/03-functional-ui-plan.md`.
-- Der Funktions- und UI-Plan ist geprüft und bereit zur persönlichen Abnahme; die noch offenen UX-Grenzen sind ausdrücklich markiert.
+- Die Phase `Funktions- und UI-Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `0c42dd3dc88c7009ad86cc2796e1764fb55e1e09` auf GitHub abgeschlossen.
+- Nächste Rollendatei: `agents/04-technical-plan.md`.
 
 ## Zulässige Statuswerte
 

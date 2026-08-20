@@ -5,6 +5,8 @@
 - Status: Freigegeben
 - Freigabe: persönlich am 2026-08-20 durch den Entwickler
 - Grundlage: freigegebene `docs/product-requirements.md` vom 2026-08-20
+- GitHub-Status: Ergebnis-Commit `0c42dd3dc88c7009ad86cc2796e1764fb55e1e09` auf `main` veröffentlicht und am 2026-08-20 remote verifiziert
+- Integration: direkt auf `main`; Pull Request nicht verwendet
 - Stand: 2026-08-20
 
 ## Geltungsbereich und Grundlagen
