@@ -14,19 +14,19 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Implementierung – Etappe 1: Lebendige Grundszene
+Prüfung – Etappe 1: Lebendige Grundszene
 
 ## Status
 
-Nicht begonnen
+Bereit zum GitHub-Abschluss
 
 ## Zuletzt aktualisiert
 
-2026-08-20
+2026-08-20 – Etappe 01 persönlich angenommen, GitHub-Abschluss ausstehend
 
 ## Aktueller Auftrag
 
-Die freigegebene Etappe 1 `Lebendige Grundszene` gemäß ihrer Etappendatei umsetzen.
+Die persönlich angenommene Etappe 1 `Lebendige Grundszene` gemäß GitHub-Abschlussprotokoll auf `main` abschließen.
 
 ## Erforderliche Eingangsdokumente
 
@@ -64,11 +64,16 @@ Die freigegebene Etappe 1 `Lebendige Grundszene` gemäß ihrer Etappendatei umse
 
 ## Offen
 
-- Etappe 1 implementieren und anschließend unabhängig prüfen lassen
+- GitHub-Abschluss für Etappe 1 durchführen
 
 ## Bekannte Probleme oder Blocker
 
 - Keine
+
+## Laufende Arbeit
+
+- Persönliche Abnahme für Etappe 01 `Lebendige Grundszene` am 2026-08-20 angenommen; GitHub-Abschluss läuft.
+- Ausgangsstand: `main` entspricht `origin/main`; die bereits vorhandene Änderung an `AGENTS.md` ist unbeteiligt und bleibt unverändert.
 
 ## Wichtige Entscheidungen oder Planänderungen
 
@@ -83,6 +88,14 @@ Die freigegebene Etappe 1 `Lebendige Grundszene` gemäß ihrer Etappendatei umse
 
 ## Ausgeführte Prüfungen
 
+- Etappe 01: Getrennte Prüfung im Codex In-app Browser auf 1280 × 720 und 390 × 844 durchgeführt; Szene, drei unterschiedlich bewegte Fische, Blasen, Pflanzen und Partikel in beiden Größen sichtbar und lesbar
+- Etappe 01: Browser-Konsole auf Warnungen und Fehler geprüft; keine Treffer
+- Etappe 01: Responsive Größenprüfung: sichtbare Canvas-Fläche 1096 × 558 CSS-Pixel bei 1280 × 720 sowie 366 × 658 CSS-Pixel bei 390 × 844, ohne leere oder unlesbare Szene
+- Etappe 01: `git diff --check` erfolgreich ausgeführt
+- Etappe 01: Statische Suche in `index.html` auf externe URLs, Speicherzugriffe, Netzwerkanfragen und Abhängigkeitseinbindungen ohne Treffer ausgeführt
+- Etappe 01: Browser-Vorprüfung über lokalen Server auf Desktop sowie im Viewport 390 × 844 durchgeführt; Aquarium, drei unterschiedlich bewegte Fische, Blasen, Pflanzen, Partikel und vorbereiteter Button sichtbar, keine Konsolenfehler
+- Etappe 01: Finaler Browsernachweis: Titel `PocketAquarium`, Button `Füttern` sichtbar und wie für die spätere Fütterung vorgesehen noch deaktiviert; keine Konsolenfehler
+- Etappe 01: Node-basierte Syntaxprüfung nicht ausführbar, weil `node` lokal nicht installiert ist; Browser-Laufzeitprüfung erfolgreich
 - Eingangsbeschreibung auf konkrete Interaktionen und sichtbare Aquariumselemente geprüft
 - Ergebnisdatei auf die vorgeschriebene Abschnittsstruktur geprüft
 - Problem, Zielgruppe, Nutzungssituation und zentralen Benutzernutzen getrennt und konkret formuliert
@@ -192,7 +205,7 @@ Die freigegebene Etappe 1 `Lebendige Grundszene` gemäß ihrer Etappendatei umse
 
 ## Nächster Schritt
 
-Vor Beginn die Rollendatei `agents/06-implementation.md`, die fünf freigegebenen Planungsdokumente und `docs/stages/01-lebendige-grundszene.md` vollständig lesen; danach den Status auf `In Bearbeitung` setzen.
+Persönliche Abnahme für Etappe 01 `Lebendige Grundszene` durchführen: den wichtigsten Ablauf auf Desktop oder Touch öffnen, Szene und Bewegungsgefühl beurteilen und Ergebnis beziehungsweise akzeptierte Einschränkungen dokumentieren. Bei Annahme folgt der GitHub-Abschluss; bei Ablehnung beginnt `Korrektur – Etappe 1: Lebendige Grundszene` mit den bestätigten Befunden.
 
 ## Übergabehinweise für den nächsten Agenten
 

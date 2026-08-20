@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>PocketAquarium</title>
+    <style>
+      :root { background: #061b2e; color: #ecf8ff; font-family: system-ui, sans-serif; }
+      * { box-sizing: border-box; }
+      body { align-items: center; display: grid; margin: 0; min-height: 100dvh; padding: clamp(0.75rem, 2vw, 1.5rem); }
+      main { margin: auto; max-width: 1100px; position: relative; width: 100%; }
+      canvas { background: linear-gradient(#0c6584 0%, #07344e 64%, #042338 100%); border: 2px solid #7ad4df; border-radius: 1.25rem; box-shadow: 0 1rem 3rem #0008; display: block; height: min(78dvh, 680px); min-height: 320px; touch-action: none; width: 100%; }
+      .controls { bottom: 1rem; display: flex; justify-content: center; left: 1rem; pointer-events: none; position: absolute; right: 1rem; }
+      button { background: #ffbf4f; border: 2px solid #fff3ca; border-radius: 999px; box-shadow: 0 .2rem .6rem #04233799; color: #132839; font: inherit; font-weight: 750; padding: .7rem 1.2rem; pointer-events: auto; }
+      button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+      .notice { margin: .8rem 0 0; text-align: center; }
+      [hidden] { display: none; }
+    </style>
+  </head>
+  <body>
+    <main aria-label="PocketAquarium">
+      <canvas id="aquarium" aria-label="Animierte Aquariumansicht mit schwimmenden Fischen" role="img"></canvas>
+      <div class="controls"><button id="feed" type="button" disabled title="Fütterung folgt in einer späteren Etappe">Füttern</button></div>
+      <p id="notice" class="notice" hidden></p>
+    </main>
+    <script>
+      (() => {
+        const canvas = document.querySelector('#aquarium');
+        const feedButton = document.querySelector('#feed');
+        const notice = document.querySelector('#notice');
+        const context = canvas.getContext?.('2d');
+
+        if (!context) {
+          notice.hidden = false;
+          notice.textContent = 'Dein Browser unterstützt die Aquariumansicht nicht.';
+          return;
+        }
+
+        const state = {
+          width: 0, height: 0, lastTime: 0,
+          fish: [
+            { x: .22, y: .31, speed: .075, size: 31, phase: 0.3, color: '#ffbf4f', accent: '#fff0b5', direction: 1, turn: 0.88 },
+            { x: .62, y: .55, speed: .048, size: 43, phase: 2.1, color: '#ef6b79', accent: '#ffd1bd', direction: -1, turn: 0.57 },
+            { x: .43, y: .72, speed: .1, size: 24, phase: 4.4, color: '#8bddbd', accent: '#d7ffe3', direction: 1, turn: 1.16 }
+          ],
+          bubbles: Array.from({ length: 10 }, (_, i) => ({ x: .07 + ((i * 37) % 86) / 100, y: (i * 19 % 100) / 100, size: 3 + i % 4, speed: .025 + i % 3 * .008 })),
+          particles: Array.from({ length: 34 }, (_, i) => ({ x: (i * 31 % 100) / 100, y: (i * 47 % 100) / 100, drift: .008 + i % 4 * .003, phase: i }))
+        };
+
+        function resize() {
+          const rect = canvas.getBoundingClientRect();
+          const scale = Math.min(window.devicePixelRatio || 1, 2);
+          canvas.width = Math.round(rect.width * scale);
+          canvas.height = Math.round(rect.height * scale);
+          context.setTransform(scale, 0, 0, scale, 0, 0);
+          state.width = rect.width;
+          state.height = rect.height;
+        }
+
+        function drawPlant(x, base, height, phase) {
+          context.strokeStyle = '#237c65'; context.lineWidth = 8; context.lineCap = 'round';
+          for (let leaf = -1; leaf <= 1; leaf++) {
+            context.beginPath(); context.moveTo(x, base);
+            context.quadraticCurveTo(x + leaf * 20 + Math.sin(phase) * 8, base - height * .55, x + leaf * 30 + Math.cos(phase * 1.3) * 10, base - height);
+            context.stroke();
+          }
+        }
+
+        function drawFish(fish, time) {
+          const x = fish.x * state.width, y = fish.y * state.height;
+          const wiggle = Math.sin(time * 4 * fish.speed + fish.phase) * 5;
+          context.save(); context.translate(x, y + wiggle); context.scale(fish.direction, 1);
+          context.fillStyle = fish.color;
+          context.beginPath(); context.ellipse(0, 0, fish.size, fish.size * .55, 0, 0, Math.PI * 2); context.fill();
+          context.beginPath(); context.moveTo(-fish.size * .75, 0); context.lineTo(-fish.size * 1.35, -fish.size * .55); context.lineTo(-fish.size * 1.25, fish.size * .55); context.closePath(); context.fill();
+          context.fillStyle = fish.accent; context.beginPath(); context.arc(fish.size * .48, -fish.size * .16, Math.max(2, fish.size * .09), 0, Math.PI * 2); context.fill();
+          context.fillStyle = '#102b3a'; context.beginPath(); context.arc(fish.size * .5, -fish.size * .17, Math.max(1.5, fish.size * .045), 0, Math.PI * 2); context.fill();
+          context.restore();
+        }
+
+        function update(dt) {
+          for (const fish of state.fish) {
+            fish.x += fish.direction * fish.speed * dt;
+            fish.y += Math.sin(performance.now() * .001 * fish.turn + fish.phase) * .009 * dt;
+            if (fish.x > 1.12 || fish.x < -.12) { fish.direction *= -1; fish.x = Math.max(-.1, Math.min(1.1, fish.x)); }
+            fish.y = Math.max(.16, Math.min(.8, fish.y));
+          }
+          for (const bubble of state.bubbles) { bubble.y -= bubble.speed * dt; if (bubble.y < -.04) { bubble.y = 1.04; bubble.x = .05 + Math.random() * .9; } }
+          for (const particle of state.particles) { particle.y -= particle.drift * dt; if (particle.y < 0) particle.y = 1; }
+        }
+
+        function render(time) {
+          const { width, height } = state;
+          context.clearRect(0, 0, width, height);
+          const seaFloor = context.createLinearGradient(0, height * .82, 0, height);
+          seaFloor.addColorStop(0, '#b27d4d'); seaFloor.addColorStop(1, '#694128'); context.fillStyle = seaFloor; context.fillRect(0, height * .83, width, height * .17);
+          context.fillStyle = '#d6f4f033';
+          for (const particle of state.particles) context.fillRect(state.width * particle.x + Math.sin(time * .0008 + particle.phase) * 8, state.height * particle.y, 2, 2);
+          for (const bubble of state.bubbles) { context.strokeStyle = '#d8ffffaa'; context.lineWidth = 1.5; context.beginPath(); context.arc(bubble.x * width, bubble.y * height, bubble.size, 0, Math.PI * 2); context.stroke(); }
+          drawPlant(width * .12, height * .87, height * .28, time * .001); drawPlant(width * .86, height * .88, height * .34, time * .0012 + 2); drawPlant(width * .7, height * .9, height * .19, time * .0009 + 5);
+          state.fish.forEach(fish => drawFish(fish, time * .001));
+        }
+
+        function frame(time) { const dt = Math.min((time - state.lastTime) / 1000 || 0, .05); state.lastTime = time; update(dt); render(time); requestAnimationFrame(frame); }
+        new ResizeObserver(resize).observe(canvas); resize(); requestAnimationFrame(frame);
+        // Die sichtbare, native Fütterungsaktion wird in Etappe 03 aktiviert.
+      })();
+    </script>
+  </body>
+</html>
