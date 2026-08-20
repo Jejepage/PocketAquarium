@@ -18,7 +18,7 @@ Technischer Plan
 
 ## Status
 
-Nicht begonnen
+Bereit zum GitHub-Abschluss
 
 ## Zuletzt aktualisiert
 
@@ -50,10 +50,15 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 - PRD-Entwurf am 2026-08-20 persönlich durch den Entwickler freigegeben
 - Funktions- und UI-Plan mit einer einzigen Aquariumansicht, fünf vollständigen Kernabläufen, Zuständen und prüfbaren Akzeptanzkriterien erstellt
 - Funktions- und UI-Plan am 2026-08-20 persönlich durch den Entwickler freigegeben
+- Technischen Planentwurf in `docs/technical-plan.md` erstellt: einzelne HTML-Datei mit Canvas 2D, browsernativem JavaScript, Pointer Events und flüchtigem Laufzeitzustand
+- Keine externen APIs, Konten, Berechtigungen, Speicherung, Abhängigkeiten, Lizenzen oder laufenden Kosten für V1 vorgesehen
+- Drei Startfische und ein Szenenlimit von sechs Fischen als reversible, lesbarkeitswahrende Umsetzungsentscheidung dokumentiert
+- OD-01 persönlich entschieden: Unterstützung der jeweils aktuellen stabilen Evergreen-Versionen von Safari, Chrome, Edge und Firefox (Option A)
+- Technischen Plan am 2026-08-20 persönlich durch den Entwickler freigegeben
 
 ## Offen
 
-- Phase `Technischer Plan` mit den freigegebenen Eingabedokumenten beginnen
+- GitHub-Abschluss der freigegebenen Phase `Technischer Plan` durchführen
 
 ## Bekannte Probleme oder Blocker
 
@@ -67,6 +72,7 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 - Nachtmodus, großer Hintergrundfisch und Finger-Folgemodus gehören nicht zum vorgeschlagenen Mindestumfang
 - Integration erfolgt für die initiale Dokumentationsphase direkt auf dem Zielbranch `main`; ein Pull Request wird nicht verwendet
 - Das neu einzurichtende GitHub-Repository wird zunächst privat angelegt
+- Technischer Plan verwendet Canvas 2D, natives JavaScript und Pointer Events ohne Framework oder externe Ressourcen; Browser-Kompatibilität ist auf aktuelle stabile Evergreen-Versionen festgelegt
 
 ## Ausgeführte Prüfungen
 
@@ -92,6 +98,7 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 - Erfolgskriterien auf Beobachtbarkeit ohne erfundene Zielwerte geprüft
 - PRD auf Konsistenz mit der Ideenvalidierung sowie auf fehlende technische und detaillierte UI-Vorentscheidungen geprüft
 - Arbeitsstand mit `git diff --check` auf Whitespacefehler geprüft
+- Persönliche Freigabe des technischen Plans sowie Option A für OD-01 am 2026-08-20 dokumentiert
 - Freigegebenes PRD auf stabile Funktionskennungen, dokumentierte offene Entscheidungen und erfolgreichen GitHub-Abschluss geprüft
 - Jede PRD-Kernfunktion mindestens einem vollständigen Benutzerablauf und mindestens einem Akzeptanzkriterium zugeordnet
 - Hauptabläufe auf klaren Start, sichtbares Ergebnis und relevante Abbruch- oder Grenzfälle geprüft
@@ -100,6 +107,12 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 - Akzeptanzkriterien auf beobachtbares Verhalten ohne interne Umsetzungsentscheidungen geprüft
 - Touch-, Maus-, Trackpad-, Tastatur- und grundlegende Barrierefreiheitsanforderungen für die Zielplattform berücksichtigt
 - Funktions- und UI-Plan auf fehlende Architekturvorentscheidungen geprüft
+- Freigegebene Eingabedokumente vollständig gelesen, auf Widersprüche geprüft und ihren GitHub-Abschluss anhand der dokumentierten Ergebnis-Commits geprüft
+- `docs/technical-plan.md` auf alle vorgeschriebenen Abschnitte geprüft
+- Jede Kernfunktion F-01 bis F-05 sowie alle Akzeptanzkriterien technisch zugeordnet und mit einem vorgesehenen Prüfweg versehen
+- Datenlebenszyklus, fehlende Speicherung, Datenschutz, Berechtigungen, externe Dienste, Lizenzen und laufende Kosten auf Konsistenz mit dem PRD geprüft
+- Aktuelle Plattformgrundlagen für Canvas, Pointer Events, `requestAnimationFrame` und die bewusst nicht verwendete Speicheroption `localStorage` in der offiziellen MDN-Dokumentation geprüft und mit Abrufdatum verlinkt
+- Arbeitsstand mit `git diff --check` auf Whitespacefehler geprüft
 
 ## GitHub-Stand
 
@@ -138,7 +151,7 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 
 ## Nächster Schritt
 
-Vor Beginn die Rollendatei `agents/04-technical-plan.md` sowie die freigegebenen Eingabedokumente vollständig lesen und den Status auf `In Bearbeitung` setzen.
+Abschlussumfang prüfen, Ergebnis-Commit für den freigegebenen technischen Plan erstellen und auf `origin/main` pushen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -151,6 +164,7 @@ Vor Beginn die Rollendatei `agents/04-technical-plan.md` sowie die freigegebenen
 - Die Phase `Produktbeschreibung / PRD` ist persönlich freigegeben und mit dem Ergebnis-Commit `2bb2ab738cbdc5ca9616bf9ecd58dce3d40f42c7` auf GitHub abgeschlossen.
 - Die Phase `Funktions- und UI-Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `0c42dd3dc88c7009ad86cc2796e1764fb55e1e09` auf GitHub abgeschlossen.
 - Nächste Rollendatei: `agents/04-technical-plan.md`.
+- Der technische Plan ist persönlich freigegeben. Nach erfolgreichem GitHub-Abschluss: nächste Phase `Implementierungsplan`; erforderliche Eingaben: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md` und `docs/technical-plan.md`.
 
 ## Zulässige Statuswerte
 
