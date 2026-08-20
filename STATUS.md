@@ -18,7 +18,7 @@ Funktions- und UI-Plan
 
 ## Status
 
-Nicht begonnen
+Bereit zum GitHub-Abschluss
 
 ## Zuletzt aktualisiert
 
@@ -47,10 +47,12 @@ Die freigegebenen Produktanforderungen in einen Funktions- und UI-Plan für die 
 - Sichtbare Füttern-Schaltfläche für den Mindestumfang bestätigt
 - PRD-Entwurf mit Produktvision, Benutzerbedürfnissen, fünf Kernfunktionen, Qualitätsanforderungen, Erfolgskriterien und Rückverfolgbarkeit erstellt
 - PRD-Entwurf am 2026-08-20 persönlich durch den Entwickler freigegeben
+- Funktions- und UI-Plan mit einer einzigen Aquariumansicht, fünf vollständigen Kernabläufen, Zuständen und prüfbaren Akzeptanzkriterien erstellt
+- Funktions- und UI-Plan am 2026-08-20 persönlich durch den Entwickler freigegeben
 
 ## Offen
 
-- Phase `Funktions- und UI-Plan` mit der freigegebenen `docs/product-requirements.md` beginnen
+- GitHub-Abschluss für die freigegebene Phase `Funktions- und UI-Plan` durchführen
 
 ## Bekannte Probleme oder Blocker
 
@@ -89,6 +91,14 @@ Die freigegebenen Produktanforderungen in einen Funktions- und UI-Plan für die 
 - Erfolgskriterien auf Beobachtbarkeit ohne erfundene Zielwerte geprüft
 - PRD auf Konsistenz mit der Ideenvalidierung sowie auf fehlende technische und detaillierte UI-Vorentscheidungen geprüft
 - Arbeitsstand mit `git diff --check` auf Whitespacefehler geprüft
+- Freigegebenes PRD auf stabile Funktionskennungen, dokumentierte offene Entscheidungen und erfolgreichen GitHub-Abschluss geprüft
+- Jede PRD-Kernfunktion mindestens einem vollständigen Benutzerablauf und mindestens einem Akzeptanzkriterium zugeordnet
+- Hauptabläufe auf klaren Start, sichtbares Ergebnis und relevante Abbruch- oder Grenzfälle geprüft
+- Ansichten und Navigation auf fehlende unbegründete Zusatzfunktionen geprüft
+- Nicht anwendbare Lade-, Leer-, Offline- und Berechtigungszustände ausdrücklich begründet
+- Akzeptanzkriterien auf beobachtbares Verhalten ohne interne Umsetzungsentscheidungen geprüft
+- Touch-, Maus-, Trackpad-, Tastatur- und grundlegende Barrierefreiheitsanforderungen für die Zielplattform berücksichtigt
+- Funktions- und UI-Plan auf fehlende Architekturvorentscheidungen geprüft
 
 ## GitHub-Stand
 
@@ -112,9 +122,20 @@ Die freigegebenen Produktanforderungen in einen Funktions- und UI-Plan für die 
 - Bekannte Einschränkungen: Keine
 - Nächster Abschnitt: `Funktions- und UI-Plan`; erforderliche Eingabe: freigegebene `docs/product-requirements.md`
 
+## Geplanter GitHub-Abschluss
+
+- Abschnitt: Phase `Funktions- und UI-Plan`
+- Persönliche Freigabe: 2026-08-20, freigegeben durch den Entwickler
+- Abschlussdateien: `docs/functional-plan.md` und `STATUS.md`
+- Branch und Zielbranch: `main` nach `main`
+- Pull Request: Nicht verwendet
+- Prüfungen: PRD-Rückverfolgbarkeit, vollständige Abläufe, Zustände, Barrierefreiheit, Akzeptanzkriterien und `git diff --check`
+- Bekannte Einschränkungen: Keine
+- Nächster Abschnitt: `Technischer Plan`; erforderliche Eingaben: freigegebene `docs/product-requirements.md` und `docs/functional-plan.md`
+
 ## Nächster Schritt
 
-Vor Beginn die Rollendatei `agents/03-functional-ui-plan.md` sowie die freigegebene `docs/product-requirements.md` vollständig lesen und den Status auf `In Bearbeitung` setzen.
+Ergebnis-Commit für den freigegebenen Funktions- und UI-Plan erstellen, auf `main` pushen und remote prüfen. Danach Abschlussdokumentation committen und die nächste Phase freigeben.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -126,6 +147,7 @@ Vor Beginn die Rollendatei `agents/03-functional-ui-plan.md` sowie die freigegeb
 - Die Phase `Idee und Problemvalidierung` ist persönlich freigegeben und fachlich abgeschlossen.
 - Die Phase `Produktbeschreibung / PRD` ist persönlich freigegeben und mit dem Ergebnis-Commit `2bb2ab738cbdc5ca9616bf9ecd58dce3d40f42c7` auf GitHub abgeschlossen.
 - Nächste Rollendatei: `agents/03-functional-ui-plan.md`.
+- Der Funktions- und UI-Plan ist geprüft und bereit zur persönlichen Abnahme; die noch offenen UX-Grenzen sind ausdrücklich markiert.
 
 ## Zulässige Statuswerte
 
