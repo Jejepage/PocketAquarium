@@ -14,11 +14,11 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Idee und Problemvalidierung
+Produktbeschreibung / PRD
 
 ## Status
 
-Abgeschlossen
+Bereit zum GitHub-Abschluss
 
 ## Zuletzt aktualisiert
 
@@ -26,11 +26,11 @@ Abgeschlossen
 
 ## Aktueller Auftrag
 
-Phase `Idee und Problemvalidierung` abschließen und den freigegebenen Ergebnisstand nachvollziehbar auf GitHub bereitstellen.
+Aus der freigegebenen Ideenvalidierung einen kompakten, verbindlichen und technikneutralen PRD-Entwurf für die erste Version erstellen.
 
 ## Erforderliche Eingangsdokumente
 
-- [x] ursprüngliche Idee oder Aufgabenbeschreibung (vom Entwickler am 2026-08-20 im Codex-Task bereitgestellt)
+- [x] freigegebene `docs/idea-validation.md`
 
 ## Erledigt
 
@@ -45,10 +45,12 @@ Phase `Idee und Problemvalidierung` abschließen und den freigegebenen Ergebniss
 - Schwerpunkt als verspieltes Entdeckungserlebnis bestätigt
 - Allgemeines Publikum als Zielgruppe bestätigt
 - Sichtbare Füttern-Schaltfläche für den Mindestumfang bestätigt
+- PRD-Entwurf mit Produktvision, Benutzerbedürfnissen, fünf Kernfunktionen, Qualitätsanforderungen, Erfolgskriterien und Rückverfolgbarkeit erstellt
+- PRD-Entwurf am 2026-08-20 persönlich durch den Entwickler freigegeben
 
 ## Offen
 
-- Nächste Phase `Produktbeschreibung / PRD` mit der freigegebenen Ideenvalidierung als Eingangsdokument beginnen
+- GitHub-Abschluss für die freigegebene Phase `Produktbeschreibung / PRD` durchführen
 
 ## Bekannte Probleme oder Blocker
 
@@ -79,6 +81,14 @@ Phase `Idee und Problemvalidierung` abschließen und den freigegebenen Ergebniss
 - Gestagten Stand mit `git diff --cached --check` auf Whitespacefehler geprüft
 - Ergebnis-Commit `11f24b7c076bfde30aa0f75a54bbe31ef64e9dc2` am 2026-08-20 auf `origin/main` gepusht
 - Remote-Verfügbarkeit und Commit-Nachricht mit der GitHub API bestätigt
+- Vorherige Ideenvalidierung auf dokumentierte Entscheidung `Weiterführen` und erfolgreichen GitHub-Abschluss geprüft
+- PRD gegen die verpflichtende Abschnittsstruktur geprüft
+- Jede Kernfunktion einem dokumentierten Benutzerbedürfnis und mindestens einem Erfolgskriterium zugeordnet
+- Hauptanwendungsfall gegen den Umfang der ersten Version geprüft
+- Kernumfang, spätere Optionen und Nicht-Ziele getrennt geprüft
+- Erfolgskriterien auf Beobachtbarkeit ohne erfundene Zielwerte geprüft
+- PRD auf Konsistenz mit der Ideenvalidierung sowie auf fehlende technische und detaillierte UI-Vorentscheidungen geprüft
+- Arbeitsstand mit `git diff --check` auf Whitespacefehler geprüft
 
 ## GitHub-Stand
 
@@ -89,9 +99,20 @@ Phase `Idee und Problemvalidierung` abschließen und den freigegebenen Ergebniss
 - Pull Request: Nicht verwendet
 - Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
 
+## Geplanter GitHub-Abschluss
+
+- Abschnitt: Phase `Produktbeschreibung / PRD`
+- Persönliche Freigabe: 2026-08-20, freigegeben durch den Entwickler
+- Abschlussdateien: `docs/product-requirements.md` und `STATUS.md`
+- Branch und Zielbranch: `main` nach `main`
+- Pull Request: Nicht verwendet
+- Prüfungen: PRD-Struktur, Rückverfolgbarkeit, Umfangstrennung, Konsistenzprüfung und `git diff --check`
+- Bekannte Einschränkungen: Keine
+- Nächster Abschnitt: `Funktions- und UI-Plan`; erforderliche Eingabe: freigegebene `docs/product-requirements.md`
+
 ## Nächster Schritt
 
-Nach Veröffentlichung und Remote-Prüfung dieses Abschlussstands die Phase `Produktbeschreibung / PRD` beginnen. Erforderliche Eingabe ist die freigegebene `docs/idea-validation.md`.
+Ergebnis-Commit für den freigegebenen PRD erstellen, auf `main` pushen und remote prüfen. Danach Abschlussdokumentation committen und die nächste Phase freigeben.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -101,7 +122,8 @@ Nach Veröffentlichung und Remote-Prüfung dieses Abschlussstands die Phase `Pro
 - Vor einem Phasenwechsel sind die persönliche Freigabe und ein erfolgreich verfügbarer GitHub-Stand erforderlich.
 - Zum Ergebnis-Commit gehören `docs/idea-validation.md`, `STATUS.md` und die bereits bereitgestellte Workflow-Grundlage dieses neuen Projekts.
 - Die Phase `Idee und Problemvalidierung` ist persönlich freigegeben und fachlich abgeschlossen.
-- Nächste Rollendatei: `agents/02-product-requirements.md`.
+- Aktuelle Rollendatei: `agents/02-product-requirements.md`.
+- Der PRD-Entwurf ist geprüft und bereit zur persönlichen Abnahme; technische und UI-Detailentscheidungen bleiben der nächsten Phase vorbehalten.
 
 ## Zulässige Statuswerte
 
