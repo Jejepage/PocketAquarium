@@ -18,7 +18,7 @@ Idee und Problemvalidierung
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Abgeschlossen
 
 ## Zuletzt aktualisiert
 
@@ -26,7 +26,7 @@ Bereit zum GitHub-Abschluss
 
 ## Aktueller Auftrag
 
-Die eingereichte Idee für ein interaktives Pocket-Aquarium prüfen, schärfen und für die persönliche Freigabe vorbereiten.
+Phase `Idee und Problemvalidierung` abschließen und den freigegebenen Ergebnisstand nachvollziehbar auf GitHub bereitstellen.
 
 ## Erforderliche Eingangsdokumente
 
@@ -48,7 +48,7 @@ Die eingereichte Idee für ein interaktives Pocket-Aquarium prüfen, schärfen u
 
 ## Offen
 
-- GitHub-Repository einrichten und Abschluss der freigegebenen Phase veröffentlichen
+- Nächste Phase `Produktbeschreibung / PRD` mit der freigegebenen Ideenvalidierung als Eingangsdokument beginnen
 
 ## Bekannte Probleme oder Blocker
 
@@ -77,17 +77,21 @@ Die eingereichte Idee für ein interaktives Pocket-Aquarium prüfen, schärfen u
 - Git-Repository auf `main` initialisiert, privates GitHub-Repository erstellt und als `origin` eingetragen
 - Staging-Auswahl und vollständige Dateiliste geprüft; `.DS_Store` wird durch `.gitignore` ausgeschlossen
 - Gestagten Stand mit `git diff --cached --check` auf Whitespacefehler geprüft
+- Ergebnis-Commit `11f24b7c076bfde30aa0f75a54bbe31ef64e9dc2` am 2026-08-20 auf `origin/main` gepusht
+- Remote-Verfügbarkeit und Commit-Nachricht mit der GitHub API bestätigt
 
 ## GitHub-Stand
 
 - Branch: `main`; Zielbranch: `main`
-- Letzter Push: Noch nicht erfolgt
-- Phasen- oder Etappenabschluss auf GitHub: Noch nicht erfolgt
+- Ergebnis-Commit: `11f24b7c076bfde30aa0f75a54bbe31ef64e9dc2` (`docs(phase-01): approve idea validation`)
+- Letzter Ergebnis-Push: 2026-08-20 07:11 CEST; auf GitHub bestätigt
+- Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation im nachfolgenden Abschluss-Commit auf `main` (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
 - Pull Request: Nicht verwendet
+- Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
 
 ## Nächster Schritt
 
-Privates GitHub-Repository mit Zielbranch `main` einrichten, freigegebenen Ergebnisstand und Abschlussdokumentation pushen und deren Verfügbarkeit prüfen. Danach kann die Phase `Produktbeschreibung / PRD` beginnen.
+Nach Veröffentlichung und Remote-Prüfung dieses Abschlussstands die Phase `Produktbeschreibung / PRD` beginnen. Erforderliche Eingabe ist die freigegebene `docs/idea-validation.md`.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -96,6 +100,8 @@ Privates GitHub-Repository mit Zielbranch `main` einrichten, freigegebenen Ergeb
 - Der Nachtmodus ist optional; der Kernumfang darf davon nicht abhängen.
 - Vor einem Phasenwechsel sind die persönliche Freigabe und ein erfolgreich verfügbarer GitHub-Stand erforderlich.
 - Zum Ergebnis-Commit gehören `docs/idea-validation.md`, `STATUS.md` und die bereits bereitgestellte Workflow-Grundlage dieses neuen Projekts.
+- Die Phase `Idee und Problemvalidierung` ist persönlich freigegeben und fachlich abgeschlossen.
+- Nächste Rollendatei: `agents/02-product-requirements.md`.
 
 ## Zulässige Statuswerte
 

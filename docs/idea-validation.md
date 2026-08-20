@@ -5,6 +5,8 @@
 - Status: Freigegeben
 - Freigabe: `Weiterführen`
 - Persönlich freigegeben: 2026-08-20 durch den Entwickler
+- GitHub-Status: Ergebnis-Commit `11f24b7c076bfde30aa0f75a54bbe31ef64e9dc2` auf `main` veröffentlicht und am 2026-08-20 remote verifiziert
+- Integration: direkt auf `main`; Pull Request nicht verwendet
 - Stand: 2026-08-20
 
 ## Ausgangsidee
