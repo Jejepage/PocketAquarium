@@ -2,7 +2,7 @@
 
 ## Status und Freigabe
 
-- Status: Persönlich abgenommen – bereit zum GitHub-Abschluss
+- Status: Abgeschlossen
 - Freigabe: persönlich am 2026-08-20 durch den Entwickler
 
 ## Ziel und sichtbares Ergebnis
@@ -96,4 +96,8 @@ Keine. Die in Etappe 01 ausdrücklich vorbereitete, noch deaktivierte Fütterung
 
 ## GitHub-Abschluss
 
-Ausstehend: Der persönliche Abnahmestatus wird mit der Ergebnisdatei und der Abschlussdokumentation auf `main` veröffentlicht.
+- Ergebnis-Commit: `6aec6e51e13de295d395f89fadd530ac731256de` (`feat(stage-01): add living aquarium scene`).
+- Branch und Zielbranch: `main` nach `main`.
+- Push und Integration: am 2026-08-20 per SSH nach `origin/main` gepusht und mit `git ls-remote --heads origin main` bestätigt.
+- Pull Request: Nicht verwendet.
+- Abschlussdokumentation: wird mit dem nachfolgenden Status-Commit auf `main` veröffentlicht; dessen eigene Commit-ID wird nicht selbstreferenziell dokumentiert.

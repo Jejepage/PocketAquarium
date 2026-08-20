@@ -14,19 +14,19 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Prüfung – Etappe 1: Lebendige Grundszene
+Implementierung – Etappe 2: Szenengesten
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Nicht begonnen
 
 ## Zuletzt aktualisiert
 
-2026-08-20 – Etappe 01 persönlich angenommen, GitHub-Abschluss ausstehend
+2026-08-20 – Etappe 01 abgeschlossen und Übergabe an Etappe 02 vorbereitet
 
 ## Aktueller Auftrag
 
-Die persönlich angenommene Etappe 1 `Lebendige Grundszene` gemäß GitHub-Abschlussprotokoll auf `main` abschließen.
+Etappe 2 `Szenengesten` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Etappendatei umsetzen.
 
 ## Erforderliche Eingangsdokumente
 
@@ -64,7 +64,7 @@ Die persönlich angenommene Etappe 1 `Lebendige Grundszene` gemäß GitHub-Absch
 
 ## Offen
 
-- GitHub-Abschluss für Etappe 1 durchführen
+- Etappe 2 erst nach einem erneuten Arbeitsauftrag beginnen
 
 ## Bekannte Probleme oder Blocker
 
@@ -72,8 +72,8 @@ Die persönlich angenommene Etappe 1 `Lebendige Grundszene` gemäß GitHub-Absch
 
 ## Laufende Arbeit
 
-- Persönliche Abnahme für Etappe 01 `Lebendige Grundszene` am 2026-08-20 angenommen; GitHub-Abschluss läuft.
-- Ausgangsstand: `main` entspricht `origin/main`; die bereits vorhandene Änderung an `AGENTS.md` ist unbeteiligt und bleibt unverändert.
+- Kein aktiver Implementierungsauftrag. Ausgangsstand für Etappe 02 ist der integrierte GitHub-Stand von Etappe 01.
+- Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 
 ## Wichtige Entscheidungen oder Planänderungen
 
@@ -145,11 +145,24 @@ Die persönlich angenommene Etappe 1 `Lebendige Grundszene` gemäß GitHub-Absch
 ## GitHub-Stand
 
 - Branch: `main`; Zielbranch: `main`
-- Ergebnis-Commit: `55dfe1f794e5b4e63888248cfe5e55c59a11899b` (`docs(phase-05): approve implementation plan`)
-- Letzter Ergebnis-Push: 2026-08-20 10:35 CEST; auf GitHub per `git ls-remote` bestätigt
+- Ergebnis-Commit: `6aec6e51e13de295d395f89fadd530ac731256de` (`feat(stage-01): add living aquarium scene`)
+- Letzter Ergebnis-Push: 2026-08-20; auf GitHub per `git ls-remote --heads origin main` bestätigt
 - Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation wird mit diesem nachgelagerten Commit auf `main` gepusht (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
 - Pull Request: Nicht verwendet
 - Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
+
+## Abgeschlossener Abschnitt
+
+- Abschnitt: Etappe 01 `Lebendige Grundszene`
+- Status: Abgeschlossen
+- Persönliche Freigabe: 2026-08-20, angenommen durch den Entwickler
+- Ergebnis-Commit: `6aec6e51e13de295d395f89fadd530ac731256de` (`feat(stage-01): add living aquarium scene`)
+- Branch und Zielbranch: `main` nach `main`
+- Push und Integration: 2026-08-20 per SSH auf `origin/main` gepusht und mit `git ls-remote --heads origin main` bestätigt
+- Pull Request: Nicht verwendet
+- Prüfungen: Prüfmatrix für AC-F01-01, AC-F01-02, AC-F02-01, AC-F02-02, AC-F05-01 und AC-F05-02; Browserprüfung auf Desktop und 390 × 844, Größenwechsel, Konsole, statische Prüfung sowie `git diff --check` und `git diff --cached --check`
+- Bekannte Einschränkungen: Die sichtbare Fütterungsaktion ist absichtlich deaktiviert und wird erst in Etappe 03 umgesetzt; keine akzeptierten Einschränkungen
+- Nächster Abschnitt: `Implementierung – Etappe 2: Szenengesten`; erforderliche Eingaben: die vier freigegebenen Planungsdokumente, `docs/stages/02-szenengesten.md` und der auf GitHub verfügbare Abschluss von Etappe 01
 
 ## Abgeschlossener Abschnitt
 
@@ -205,7 +218,7 @@ Die persönlich angenommene Etappe 1 `Lebendige Grundszene` gemäß GitHub-Absch
 
 ## Nächster Schritt
 
-Persönliche Abnahme für Etappe 01 `Lebendige Grundszene` durchführen: den wichtigsten Ablauf auf Desktop oder Touch öffnen, Szene und Bewegungsgefühl beurteilen und Ergebnis beziehungsweise akzeptierte Einschränkungen dokumentieren. Bei Annahme folgt der GitHub-Abschluss; bei Ablehnung beginnt `Korrektur – Etappe 1: Lebendige Grundszene` mit den bestätigten Befunden.
+Etappe 2 `Szenengesten` erst nach erneutem Arbeitsauftrag beginnen. Vorher sind `agents/06-implementation.md`, die vier freigegebenen Planungsdokumente und `docs/stages/02-szenengesten.md` vollständig zu lesen; anschließend ist der Status auf `In Bearbeitung` zu setzen.
 
 ## Übergabehinweise für den nächsten Agenten
 
