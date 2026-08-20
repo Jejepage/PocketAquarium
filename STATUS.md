@@ -14,11 +14,11 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Technischer Plan
+Implementierungsplan
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Abgeschlossen
 
 ## Zuletzt aktualisiert
 
@@ -58,7 +58,7 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 
 ## Offen
 
-- GitHub-Abschluss der freigegebenen Phase `Technischer Plan` durchführen
+- Nächste Phase `Implementierungsplan` mit den drei freigegebenen Planungsdokumenten beginnen
 
 ## Bekannte Probleme oder Blocker
 
@@ -117,9 +117,9 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 ## GitHub-Stand
 
 - Branch: `main`; Zielbranch: `main`
-- Ergebnis-Commit: `11f24b7c076bfde30aa0f75a54bbe31ef64e9dc2` (`docs(phase-01): approve idea validation`)
-- Letzter Ergebnis-Push: 2026-08-20 07:11 CEST; auf GitHub bestätigt
-- Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation im nachfolgenden Abschluss-Commit auf `main` (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
+- Ergebnis-Commit: `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` (`docs(phase-04): approve technical plan`)
+- Letzter Ergebnis-Push: 2026-08-20 09:57 CEST; auf GitHub per `git ls-remote` bestätigt
+- Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation wird im nachfolgenden Abschluss-Commit auf `main` gepusht (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
 - Pull Request: Nicht verwendet
 - Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
 
@@ -149,9 +149,22 @@ Die freigegebenen Produkt- und Funktionsanforderungen in einen technischen Plan 
 - Bekannte Einschränkungen: Keine
 - Nächster Abschnitt: `Technischer Plan`; erforderliche Eingaben: freigegebene `docs/product-requirements.md` und `docs/functional-plan.md`
 
+## Abgeschlossener Abschnitt
+
+- Abschnitt: Phase `Technischer Plan`
+- Status: Abgeschlossen
+- Persönliche Freigabe: 2026-08-20, freigegeben durch den Entwickler; Browser-Kompatibilität Option A bestätigt
+- Ergebnis-Commit: `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` (`docs(phase-04): approve technical plan`)
+- Branch und Zielbranch: `main` nach `main`
+- Push und Integration: 2026-08-20 09:57 CEST auf `origin/main` gepusht und per `git ls-remote` bestätigt
+- Pull Request: Nicht verwendet
+- Prüfungen: vollständige Eingabedokumente und deren GitHub-Abschluss, vorgeschriebene Planstruktur, Rückverfolgbarkeit F-01 bis F-05 und Akzeptanzkriterien, Datenschutz-/Kosten-/Datenlebenszyklusprüfung, MDN-Quellenprüfung, `git diff --check` sowie gestagtes `git diff --cached --check`
+- Bekannte Einschränkungen: Aktuelle stabile Evergreen-Versionen von Safari, Chrome, Edge und Firefox sind zugesichert; ältere Browser und Systemversionen nicht
+- Nächster Abschnitt: `Implementierungsplan`; erforderliche Eingaben: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md` und `docs/technical-plan.md`
+
 ## Nächster Schritt
 
-Abschlussumfang prüfen, Ergebnis-Commit für den freigegebenen technischen Plan erstellen und auf `origin/main` pushen.
+Vor Beginn die Rollendatei `agents/05-implementation-plan.md` sowie die drei freigegebenen Planungsdokumente vollständig lesen und den Status auf `In Bearbeitung` setzen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -163,8 +176,9 @@ Abschlussumfang prüfen, Ergebnis-Commit für den freigegebenen technischen Plan
 - Die Phase `Idee und Problemvalidierung` ist persönlich freigegeben und fachlich abgeschlossen.
 - Die Phase `Produktbeschreibung / PRD` ist persönlich freigegeben und mit dem Ergebnis-Commit `2bb2ab738cbdc5ca9616bf9ecd58dce3d40f42c7` auf GitHub abgeschlossen.
 - Die Phase `Funktions- und UI-Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `0c42dd3dc88c7009ad86cc2796e1764fb55e1e09` auf GitHub abgeschlossen.
-- Nächste Rollendatei: `agents/04-technical-plan.md`.
-- Der technische Plan ist persönlich freigegeben. Nach erfolgreichem GitHub-Abschluss: nächste Phase `Implementierungsplan`; erforderliche Eingaben: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md` und `docs/technical-plan.md`.
+- Die Phase `Technischer Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf GitHub abgeschlossen.
+- Nächste Rollendatei: `agents/05-implementation-plan.md`.
+- Erforderliche Eingaben für die nächste Phase: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md` und `docs/technical-plan.md`.
 
 ## Zulässige Statuswerte
 

@@ -4,6 +4,7 @@
 
 - Status: Freigegeben.
 - Freigabe: persönlich am 2026-08-20 durch den Entwickler; OD-01 mit Option A bestätigt.
+- GitHub-Status: Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf `main` veröffentlicht und am 2026-08-20 remote verifiziert; Abschlussdokumentation folgt im nachgelagerten Status-Commit.
 - Grundlage: die freigegebenen `docs/product-requirements.md` und `docs/functional-plan.md`, jeweils vom 2026-08-20.
 - Abruf technischer Quellen: 2026-08-20.
 
