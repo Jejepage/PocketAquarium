@@ -2,8 +2,8 @@
 
 ## Status und Freigabe
 
-- Status: Bereit zur unabhängigen Prüfung
-- Freigabe: ausstehend
+- Status: Abgeschlossen
+- Freigabe: persönlich am 2026-08-21 durch den Entwickler
 
 ## Ziel und sichtbares Ergebnis
 
@@ -75,4 +75,7 @@ Der Entwickler hat die Etappe am 2026-08-21 persönlich geprüft und mit `Geprü
 
 ## GitHub-Abschluss
 
-Noch nicht bearbeitet.
+- Ergebnis-Commit: `328956be9c6c7b2a0f08d6fc6085b86dd5ee867e` (`feat(stage-04): harden aquarium handoff`).
+- Branch und Zielbranch: `main` nach `main`; Pull Request: Nicht verwendet.
+- Push und Integration: am 2026-08-21 per SSH nach `origin/main` gepusht und mit `git ls-remote --heads origin main` bestätigt.
+- Bekannte Einschränkungen: Keine. Die vollständige Browsermatrix (Safari, Chrome, Edge und Firefox) bleibt wie geplant Bestandteil der Release-Prüfung.

@@ -14,19 +14,19 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Implementierung – Etappe 4: Robuste Übergabe
+Release
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Abgeschlossen
 
 ## Zuletzt aktualisiert
 
-2026-08-21 – Etappe 04 `Robuste Übergabe` persönlich geprüft und freigegeben; GitHub-Abschluss läuft
+2026-08-21 – Etappe 04 `Robuste Übergabe` auf GitHub abgeschlossen; Übergabe an die Release-Phase vorbereitet
 
 ## Aktueller Auftrag
 
-Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etappendatei umsetzen.
+Release erst nach einem neuen Arbeitsauftrag gemäß `agents/08-release.md` vorbereiten.
 
 ## Erforderliche Eingangsdokumente
 
@@ -65,7 +65,7 @@ Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etapp
 
 ## Offen
 
-- Keine offenen Punkte.
+- Release mit der zugesagten Browsermatrix und GitHub-Pages-Veröffentlichung steht aus.
 
 ## Bekannte Probleme oder Blocker
 
@@ -73,9 +73,7 @@ Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etapp
 
 ## Laufende Arbeit
 
-- Persönliche Abnahme der Etappe 04 durch den Entwickler am 2026-08-21 bestätigt (`Geprüft. Ok`). Zum GitHub-Abschluss gehören ausschließlich `index.html`, `docs/stages/04-robuste-uebergabe.md` und `STATUS.md`.
-- Reproduzierbare statische Prüfung: `git diff --check` sowie `rg -n "https?://|localStorage|sessionStorage|fetch\\(|XMLHttpRequest|WebSocket|api[_-]?key|secret|token" index.html` (erwartet: keine Treffer).
-- Browser-Prüfung: aus dem Repository `python3 -m http.server 4173 --bind 127.0.0.1` starten und `http://127.0.0.1:4173/` auf Desktop sowie 390 × 844 CSS-Pixel öffnen; alle Abläufe A-01 bis A-05, Abbruch, Größenwechsel, Button-Fokus/-Aktivierung und längere Beobachtung prüfen.
+- Kein aktiver Auftrag. Ausgangsstand für Release ist der auf GitHub verfügbare Abschluss von Etappe 04.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
@@ -174,11 +172,24 @@ Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etapp
 ## GitHub-Stand
 
 - Branch: `main`; Zielbranch: `main`
-- Ergebnis-Commit: `b551198cb2f12b5ab4acd0d4df0e6e7d3429decf` (`feat(stage-03): add visible feeding`)
+- Ergebnis-Commit: `328956be9c6c7b2a0f08d6fc6085b86dd5ee867e` (`feat(stage-04): harden aquarium handoff`)
 - Letzter Ergebnis-Push: 2026-08-21; auf GitHub per `git ls-remote --heads origin main` bestätigt
-- Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation wird mit diesem nachgelagerten Commit auf `main` gepusht (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
+- Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; diese Abschlussdokumentation wird mit diesem nachgelagerten Commit auf `main` gepusht (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
 - Pull Request: Nicht verwendet
 - Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
+
+## Abgeschlossener Abschnitt
+
+- Abschnitt: Etappe 04 `Robuste Übergabe`
+- Status: Abgeschlossen
+- Persönliche Freigabe: 2026-08-21, persönlich geprüft und mit `Geprüft. Ok` angenommen durch den Entwickler; keine akzeptierten Einschränkungen
+- Ergebnis-Commit: `328956be9c6c7b2a0f08d6fc6085b86dd5ee867e` (`feat(stage-04): harden aquarium handoff`)
+- Branch und Zielbranch: `main` nach `main`
+- Push und Integration: 2026-08-21 per SSH auf `origin/main` gepusht und mit `git ls-remote --heads origin main` bestätigt
+- Pull Request: Nicht verwendet
+- Prüfungen: Statische Datenschutz-/Sicherheits-/Abhängigkeitsprüfung, Desktop- und 390 × 844-Smoke-Test, Fütterungssperre und Reaktivierung, Mausgesten, Fokus, Größenwechsel, 30-Sekunden-Beobachtung und persönliche Entwicklerprüfung
+- Bekannte Einschränkungen: Keine; die zugesagte Browsermatrix gehört zur Release-Phase
+- Nächster Abschnitt: `Release`; erforderliche Eingaben: die freigegebenen Planungsdokumente, alle abgeschlossenen Etappendateien, `agents/08-release.md` und der auf GitHub verfügbare Abschluss von Etappe 04
 
 ## Abgeschlossener Abschnitt
 
@@ -273,7 +284,7 @@ Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etapp
 
 ## Nächster Schritt
 
-Etappe 4 `Robuste Übergabe` erst nach einem neuen Arbeitsauftrag beginnen. Vorher sind `agents/06-implementation.md`, die vier freigegebenen Planungsdokumente und `docs/stages/04-robuste-uebergabe.md` vollständig zu lesen; anschließend ist der Status auf `In Bearbeitung` zu setzen.
+Release erst nach einem neuen Arbeitsauftrag beginnen. Vorher sind `agents/08-release.md`, die vier freigegebenen Planungsdokumente, alle Etappendateien sowie die GitHub-Pages-Vorgabe vollständig zu lesen; die aktuelle Repository-Sichtbarkeit ist vor einer Pages-Aktivierung mit dem Entwickler abzugleichen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -289,8 +300,9 @@ Etappe 4 `Robuste Übergabe` erst nach einem neuen Arbeitsauftrag beginnen. Vorh
 - Der Implementierungsplan ist freigegeben und mit dem Ergebnis-Commit `55dfe1f794e5b4e63888248cfe5e55c59a11899b` auf GitHub verfügbar; die vier Etappen sind `01-lebendige-grundszene`, `02-szenengesten`, `03-sichtbares-fuettern` und `04-robuste-uebergabe`.
 - Etappe 02 ist mit Ergebnis-Commit `66d7dca993906c5e80735a3fc256df36dc4c4c11` und diesem nachgelagerten Status-Commit auf GitHub abgeschlossen.
 - Etappe 03 ist mit Ergebnis-Commit `b551198cb2f12b5ab4acd0d4df0e6e7d3429decf` und diesem nachgelagerten Status-Commit auf GitHub abgeschlossen.
-- Nächste Rollendatei: `agents/06-implementation.md`.
-- Erforderliche Eingaben für die nächste Aufgabe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md` und `docs/stages/04-robuste-uebergabe.md`.
+- Etappe 04 ist mit Ergebnis-Commit `328956be9c6c7b2a0f08d6fc6085b86dd5ee867e` und diesem nachgelagerten Status-Commit auf GitHub abgeschlossen.
+- Nächste Rollendatei: `agents/08-release.md`.
+- Erforderliche Eingaben für die nächste Aufgabe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md` und alle abgeschlossenen Etappendateien.
 - GitHub Pages ist für die finale Veröffentlichung festgelegt: `index.html` aus `main` und `/ (root)`; die tatsächliche Aktivierung und URL-Prüfung gehören zur Release-Phase.
 - Die GitHub-Pages-Vorgabe wurde am 2026-08-20 direkt durch den Entwickler ergänzt; bei einem weiterhin privaten Repository ist vor Aktivierung die von GitHub angebotene Sichtbarkeitsoption zu prüfen und erforderlichenfalls erneut bestätigen zu lassen.
 
