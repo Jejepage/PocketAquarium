@@ -18,11 +18,11 @@ Implementierung – Etappe 4: Robuste Übergabe
 
 ## Status
 
-Abgeschlossen
+Bereit zum GitHub-Abschluss
 
 ## Zuletzt aktualisiert
 
-2026-08-21 – Etappe 03 auf GitHub abgeschlossen; Übergabe an Etappe 04 vorbereitet
+2026-08-21 – Etappe 04 `Robuste Übergabe` persönlich geprüft und freigegeben; GitHub-Abschluss läuft
 
 ## Aktueller Auftrag
 
@@ -65,7 +65,7 @@ Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etapp
 
 ## Offen
 
-- Etappe 4 erst nach einem neuen Arbeitsauftrag beginnen.
+- Keine offenen Punkte.
 
 ## Bekannte Probleme oder Blocker
 
@@ -73,7 +73,9 @@ Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etapp
 
 ## Laufende Arbeit
 
-- Kein aktiver Implementierungsauftrag. Ausgangsstand für Etappe 04 ist der integrierte GitHub-Stand von Etappe 03.
+- Persönliche Abnahme der Etappe 04 durch den Entwickler am 2026-08-21 bestätigt (`Geprüft. Ok`). Zum GitHub-Abschluss gehören ausschließlich `index.html`, `docs/stages/04-robuste-uebergabe.md` und `STATUS.md`.
+- Reproduzierbare statische Prüfung: `git diff --check` sowie `rg -n "https?://|localStorage|sessionStorage|fetch\\(|XMLHttpRequest|WebSocket|api[_-]?key|secret|token" index.html` (erwartet: keine Treffer).
+- Browser-Prüfung: aus dem Repository `python3 -m http.server 4173 --bind 127.0.0.1` starten und `http://127.0.0.1:4173/` auf Desktop sowie 390 × 844 CSS-Pixel öffnen; alle Abläufe A-01 bis A-05, Abbruch, Größenwechsel, Button-Fokus/-Aktivierung und längere Beobachtung prüfen.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
@@ -88,8 +90,15 @@ Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etapp
 - Das neu einzurichtende GitHub-Repository wird zunächst privat angelegt
 - Technischer Plan verwendet Canvas 2D, natives JavaScript und Pointer Events ohne Framework oder externe Ressourcen; Browser-Kompatibilität ist auf aktuelle stabile Evergreen-Versionen festgelegt
 - Veröffentlichung: Die finale `index.html` wird in der Release-Phase über GitHub Pages aus `main` und `/ (root)` publiziert; eine eigene Domain ist nicht vorgesehen
+- Etappe 04 ergänzt nur den zugesagten Fallback bei fehlenden Pointer Events und die Abbruchbereinigung für Gesten; keine Funktions- oder Architekturänderung.
 
 ## Ausgeführte Prüfungen
+
+- Etappe 04, Implementierungsprüfung: `git diff --check` erfolgreich; statische Suche in `index.html` nach externen URLs, Speicherung, Netzwerkanfragen, Geheimnissen und Abhängigkeitseinbindungen ohne Treffer.
+- Etappe 04, Browser-Smoke-Test auf Desktop (Canvas 1100 × 561,6 CSS-Pixel): sichtbarer, per Tabulator fokussierter Button; Fütterungssperre und Reaktivierung, Maus-Kurzaktivierung, Ziehen und Doppelklick ausgeführt; Konsole ohne Warnungen oder Fehler.
+- Etappe 04, Browser-Smoke-Test im kleinen Touch-Viewport 390 × 844 CSS-Pixel: Canvas 366 × 658,3 CSS-Pixel und Button sichtbar; Größenwechsel ohne Konsolenbefunde. Die Testumgebung liefert keinen echten Touch-Nachweis.
+- Etappe 04, längere Browserbeobachtung: 30 Sekunden ohne Konsolenwarnungen oder -fehler. Dies ersetzt nicht die vor Release zugesagte Browsermatrix Safari, Chrome, Edge und Firefox.
+- Etappe 04: Keine lokale HTML5-Syntax-Toolchain verfügbar, weil `node` nicht installiert ist; Browser-Laufzeitprüfung ohne Konsolenbefunde.
 
 - Etappe 03, unabhängige Wiederholungsprüfung: F-03 anhand des iPhone-Nachweises als behoben bestätigt; der zuvor unabhängig ausgeführte Desktop-Regressionstest (Fokus, Fütterungsablauf, Sperre, Reaktivierung, Geste während Fütterung, Konsole) und die statische Prüfung sind ohne Produktcode-Änderung weiterhin gültig. Keine relevanten Befunde offen.
 - Etappe 03, persönliche Abnahme: Entwickler bestätigt am 2026-08-21 auf iPhone, dass alles in Ordnung ist; keine akzeptierten Einschränkungen.

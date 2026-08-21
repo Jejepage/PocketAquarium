@@ -2,7 +2,7 @@
 
 ## Status und Freigabe
 
-- Status: Geplant
+- Status: Bereit zur unabhängigen Prüfung
 - Freigabe: ausstehend
 
 ## Ziel und sichtbares Ergebnis
@@ -51,19 +51,27 @@ Alle Kriterien, Qualitäts- und Erfolgskriterien sind ohne Umfangserweiterung na
 
 ## Umsetzungsergebnis
 
-Noch nicht bearbeitet.
+- Ergänzt: Erkennung fehlender Pointer Events. Die Aquariumansicht und die sichtbare Aktion **Füttern** bleiben verfügbar; ein kurzer Hinweis benennt die eingeschränkten Szenengesten.
+- Ergänzt: Zentrale Bereinigung einer unvollständigen Geste und eines wartenden Einzeltipps bei `pointercancel`, Fokusverlust und Größenwechsel. Damit kann nach einem Abbruch keine verspätete Neugierreaktion ausgelöst werden.
+- Unverändert: Lieferform (eine `index.html`), Funktionsumfang, Fischlimit, keine Abhängigkeiten, Speicherung oder Netzwerknutzung.
+- Aktualisiert: `STATUS.md` für die Übergabe an `Prüfung – Etappe 04: Robuste Übergabe`.
 
 ## Abweichungen und neue Erkenntnisse
 
-Noch nicht bearbeitet.
+Keine. Die Änderungen setzen die bereits freigegebenen Fehlerbehandlungsregeln aus dem technischen Plan um; sie erweitern keine Produktfunktion.
 
 ## Prüfnachweise
 
-Noch nicht bearbeitet.
+- Statisch: `git diff --check` erfolgreich.
+- Statisch: Suche in `index.html` nach externen URLs, Speicherzugriffen, Netzwerkanfragen, Geheimnissen und Abhängigkeitseinbindungen ohne Treffer.
+- Browser, Desktop (Canvas 1100 × 561,6 CSS-Pixel): Aquarium geladen, sichtbarer und per Tabulator fokussierter Button **Füttern**, Fütterungssperre während der Reaktion sowie Reaktivierung nach Abschluss bestätigt. Maus-Kurzaktivierung, Ziehen und Doppelklick wurden ausgeführt; keine Konsolenwarnungen oder -fehler.
+- Browser, kleiner Touch-Viewport (390 × 844 CSS-Pixel): Canvas 366 × 658,3 CSS-Pixel und Fütterungsbutton sichtbar. Größenwechsel während des laufenden Tests blieb ohne Konsolenwarnungen oder -fehler. Die Testumgebung erzeugt Maus-, aber keine echten Touch-Pointer-Eingaben.
+- Browser, längere Beobachtung: 30 Sekunden nach dem Größenwechsel ohne Konsolenwarnungen oder -fehler. Der Test ist ein Stabilitäts-Smoke-Test, kein Ersatz für die vor Release verlangte Prüfung in Safari, Chrome, Edge und Firefox.
+- Keine lokale HTML5-Syntax-Toolchain verfügbar: `node` ist nicht installiert; der Browser-Laufzeitnachweis erfolgte ohne Konsolenbefunde.
 
 ## Persönliche Abnahme
 
-Noch nicht bearbeitet.
+Der Entwickler hat die Etappe am 2026-08-21 persönlich geprüft und mit `Geprüft. Ok` freigegeben. Keine akzeptierten Einschränkungen.
 
 ## GitHub-Abschluss
 

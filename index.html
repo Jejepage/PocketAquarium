@@ -30,11 +30,17 @@
         const feedButton = document.querySelector('#feed');
         const notice = document.querySelector('#notice');
         const context = canvas.getContext?.('2d');
+        const supportsPointerEvents = 'PointerEvent' in window;
 
         if (!context) {
           notice.hidden = false;
           notice.textContent = 'Dein Browser unterstützt die Aquariumansicht nicht.';
           return;
+        }
+
+        if (!supportsPointerEvents) {
+          notice.hidden = false;
+          notice.textContent = 'Dein Browser unterstützt die Szenengesten nicht. Füttern bleibt verfügbar.';
         }
 
         const MAX_FISH = 6;
@@ -110,6 +116,7 @@
         }
 
         function resize() {
+          clearInteraction();
           const rect = canvas.getBoundingClientRect();
           const scale = Math.min(window.devicePixelRatio || 1, 2);
           canvas.width = Math.round(rect.width * scale);
@@ -224,25 +231,35 @@
           return { x: clamp((event.clientX - rect.left) / rect.width, 0, 1), y: clamp((event.clientY - rect.top) / rect.height, 0, 1), clientX: event.clientX, clientY: event.clientY };
         }
 
+        function clearPendingTap() {
+          if (state.pendingTap) clearTimeout(state.pendingTap.timer);
+          state.pendingTap = null;
+        }
+
         function clearGesture() {
           if (state.gesture && canvas.hasPointerCapture?.(state.gesture.pointerId)) canvas.releasePointerCapture(state.gesture.pointerId);
           state.gesture = null;
         }
 
-        canvas.addEventListener('pointerdown', event => {
+        function clearInteraction() {
+          clearGesture();
+          clearPendingTap();
+        }
+
+        function onPointerDown(event) {
           if (state.gesture) return;
           const point = scenePoint(event);
           state.gesture = { pointerId: event.pointerId, start: point, last: point, startedAt: performance.now(), dragging: false };
           canvas.setPointerCapture?.(event.pointerId);
-        });
-        canvas.addEventListener('pointermove', event => {
+        }
+        function onPointerMove(event) {
           if (!state.gesture || event.pointerId !== state.gesture.pointerId) return;
           const point = scenePoint(event); const dx = point.clientX - state.gesture.start.clientX, dy = point.clientY - state.gesture.start.clientY;
           state.gesture.last = point;
           if (!state.gesture.dragging && Math.hypot(dx, dy) >= GESTURE.dragDistance) state.gesture.dragging = true;
           if (state.gesture.dragging) fleeFrom(point);
-        });
-        canvas.addEventListener('pointerup', event => {
+        }
+        function onPointerUp(event) {
           if (!state.gesture || event.pointerId !== state.gesture.pointerId) return;
           const gesture = state.gesture; const point = scenePoint(event); clearGesture();
           const distance = Math.hypot(point.clientX - gesture.start.clientX, point.clientY - gesture.start.clientY);
@@ -254,9 +271,14 @@
           const pendingTap = { at: performance.now(), point, timer: 0 };
           pendingTap.timer = window.setTimeout(() => { if (state.pendingTap === pendingTap) { state.pendingTap = null; showCuriosity(point); } }, GESTURE.doublePressMs);
           state.pendingTap = pendingTap;
-        });
-        canvas.addEventListener('pointercancel', clearGesture);
-        window.addEventListener('blur', clearGesture);
+        }
+        if (supportsPointerEvents) {
+          canvas.addEventListener('pointerdown', onPointerDown);
+          canvas.addEventListener('pointermove', onPointerMove);
+          canvas.addEventListener('pointerup', onPointerUp);
+          canvas.addEventListener('pointercancel', clearInteraction);
+        }
+        window.addEventListener('blur', clearInteraction);
         feedButton.addEventListener('click', feedFish);
         new ResizeObserver(resize).observe(canvas); resize(); requestAnimationFrame(frame);
       })();
