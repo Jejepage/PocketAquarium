@@ -18,15 +18,15 @@ Release
 
 ## Status
 
-Abgeschlossen
+Blockiert
 
 ## Zuletzt aktualisiert
 
-2026-08-21 – Etappe 04 `Robuste Übergabe` auf GitHub abgeschlossen; Übergabe an die Release-Phase vorbereitet
+2026-08-21 – Release 1.0.0 persönlich freigegeben; Veröffentlichung durch GitHub-Verbindung und ungültige Anmeldung blockiert
 
 ## Aktueller Auftrag
 
-Release erst nach einem neuen Arbeitsauftrag gemäß `agents/08-release.md` vorbereiten.
+Release 1.0.0 nach persönlicher Abnahme über GitHub Pages aus `main` und `/ (root)` veröffentlichen.
 
 ## Erforderliche Eingangsdokumente
 
@@ -65,15 +65,15 @@ Release erst nach einem neuen Arbeitsauftrag gemäß `agents/08-release.md` vorb
 
 ## Offen
 
-- Release mit der zugesagten Browsermatrix und GitHub-Pages-Veröffentlichung steht aus.
+- Vollständige Browsermatrix, GitHub-Pages-Veröffentlichung und Prüfung der veröffentlichten URL stehen aus; zur Veröffentlichung sind eine funktionierende GitHub-Verbindung und eine gültige Anmeldung erforderlich.
 
 ## Bekannte Probleme oder Blocker
 
-- Keine.
+- GitHub Pages kann nicht aktiviert werden: `github.com` ist per DNS nicht auflösbar und `gh auth status` meldet für `Jejepage` ein ungültiges Token.
 
 ## Laufende Arbeit
 
-- Kein aktiver Auftrag. Ausgangsstand für Release ist der auf GitHub verfügbare Abschluss von Etappe 04.
+- Release 1.0.0 ist persönlich freigegeben, aber blockiert, bis GitHub-Verbindung und -Anmeldung wiederhergestellt sind.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
@@ -91,6 +91,11 @@ Release erst nach einem neuen Arbeitsauftrag gemäß `agents/08-release.md` vorb
 - Etappe 04 ergänzt nur den zugesagten Fallback bei fehlenden Pointer Events und die Abbruchbereinigung für Gesten; keine Funktions- oder Architekturänderung.
 
 ## Ausgeführte Prüfungen
+
+- Release 1.0.0, statisch: `git diff --check` erfolgreich; Suche in `index.html` nach externen URLs, Netzwerk- und Speicherzugriffen, Cookies und offensichtlichen Geheimnisbezeichnern ohne Treffer.
+- Release 1.0.0, lokaler Desktop-Smoke-Test im Codex In-App-Browser: Aquariumansicht und Button sichtbar; Fütterungssperre und Reaktivierung sowie kurze Aktivierung, Ziehen und Doppelklick bestätigt; keine Konsolenwarnungen oder -fehler.
+- Release 1.0.0, Browsermatrix: Safari und Chrome sind lokal installiert, Edge und Firefox fehlen. Die zugesagte Evergreen-Matrix wurde deshalb nicht vollständig ausgeführt. Ein 390 × 844-Viewport zeigte Canvas und Button im DOM; die automatisierte Canvas-Messung lief in einen Locator-Timeout.
+- Release 1.0.0, Veröffentlichungsvoraussetzung: `gh auth status` meldet ein ungültiges Token; `git ls-remote --heads origin main` scheiterte wegen fehlender DNS-Auflösung von `github.com`. Pages-Konfiguration, aktueller Remote-Stand und Veröffentlichung sind dadurch noch nicht prüf- oder ausführbar.
 
 - Etappe 04, Implementierungsprüfung: `git diff --check` erfolgreich; statische Suche in `index.html` nach externen URLs, Speicherung, Netzwerkanfragen, Geheimnissen und Abhängigkeitseinbindungen ohne Treffer.
 - Etappe 04, Browser-Smoke-Test auf Desktop (Canvas 1100 × 561,6 CSS-Pixel): sichtbarer, per Tabulator fokussierter Button; Fütterungssperre und Reaktivierung, Maus-Kurzaktivierung, Ziehen und Doppelklick ausgeführt; Konsole ohne Warnungen oder Fehler.
