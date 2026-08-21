@@ -14,19 +14,19 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Prüfung – Etappe 2: Szenengesten
+Implementierung – Etappe 3: Sichtbares Füttern
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Nicht begonnen
 
 ## Zuletzt aktualisiert
 
-2026-08-21 – Etappe 02 persönlich angenommen; GitHub-Abschluss wird durchgeführt
+2026-08-21 – Etappe 02 auf GitHub abgeschlossen; Übergabe an Etappe 03 vorbereitet
 
 ## Aktueller Auftrag
 
-Etappe 2 `Szenengesten` auf GitHub abschließen.
+Etappe 3 `Sichtbares Füttern` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Etappendatei umsetzen.
 
 ## Erforderliche Eingangsdokumente
 
@@ -65,7 +65,7 @@ Etappe 2 `Szenengesten` auf GitHub abschließen.
 
 ## Offen
 
-- GitHub-Abschluss für Etappe 2 durchführen.
+- Etappe 3 erst nach einem erneuten Arbeitsauftrag beginnen.
 
 ## Bekannte Probleme oder Blocker
 
@@ -73,9 +73,8 @@ Etappe 2 `Szenengesten` auf GitHub abschließen.
 
 ## Laufende Arbeit
 
-- Die Wiederholungsprüfung hat F-02 als behoben bestätigt: Der Entwickler-Test auf iPhone belegt alle drei Touch-Gesten, die erneute Desktop-Prüfung mit Maus belegt den alternativen Eingabeweg, Gestenreaktionen und das Limit von sechs Fischen. Es gibt keine offenen relevanten Befunde.
-- Der Entwickler hat Etappe 02 am 2026-08-21 nach eigener iPhone-Prüfung angenommen; es gibt keine akzeptierten Einschränkungen.
-- Der Arbeitsbranch bleibt gemäß dem bisherigen Projektstand `main`; die Änderung an `AGENTS.md` ist eine unbeteiligte Entwickleränderung und bleibt unverändert.
+- Kein aktiver Implementierungsauftrag. Ausgangsstand für Etappe 03 ist der integrierte GitHub-Stand von Etappe 02.
+- Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 
 ## Wichtige Entscheidungen oder Planänderungen
@@ -155,11 +154,24 @@ Etappe 2 `Szenengesten` auf GitHub abschließen.
 ## GitHub-Stand
 
 - Branch: `main`; Zielbranch: `main`
-- Ergebnis-Commit: `6aec6e51e13de295d395f89fadd530ac731256de` (`feat(stage-01): add living aquarium scene`)
-- Letzter Ergebnis-Push: 2026-08-20; auf GitHub per `git ls-remote --heads origin main` bestätigt
+- Ergebnis-Commit: `66d7dca993906c5e80735a3fc256df36dc4c4c11` (`feat(stage-02): add scene gestures`)
+- Letzter Ergebnis-Push: 2026-08-21; auf GitHub per `git ls-remote --heads origin main` bestätigt
 - Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation wird mit diesem nachgelagerten Commit auf `main` gepusht (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
 - Pull Request: Nicht verwendet
 - Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
+
+## Abgeschlossener Abschnitt
+
+- Abschnitt: Etappe 02 `Szenengesten`
+- Status: Abgeschlossen
+- Persönliche Freigabe: 2026-08-21, angenommen durch den Entwickler auf iPhone; keine akzeptierten Einschränkungen
+- Ergebnis-Commit: `66d7dca993906c5e80735a3fc256df36dc4c4c11` (`feat(stage-02): add scene gestures`)
+- Branch und Zielbranch: `main` nach `main`
+- Push und Integration: 2026-08-21 per SSH auf `origin/main` gepusht und mit `git ls-remote --heads origin main` bestätigt
+- Pull Request: Nicht verwendet
+- Prüfungen: Nachweismatrix für AC-F03-01 bis AC-F03-04, Desktop-Mausgesten, iPhone-Touch-Nachweis, Fischlimit sechs, Browser-Konsole, kleine Ansicht, Quellprüfung und `git diff --check`
+- Bekannte Einschränkungen: Keine
+- Nächster Abschnitt: `Implementierung – Etappe 3: Sichtbares Füttern`; erforderliche Eingaben: die vier freigegebenen Planungsdokumente, `docs/stages/03-sichtbares-fuettern.md` und der auf GitHub verfügbare Abschluss von Etappe 02
 
 ## Abgeschlossener Abschnitt
 
@@ -228,7 +240,7 @@ Etappe 2 `Szenengesten` auf GitHub abschließen.
 
 ## Nächster Schritt
 
-GitHub-Abschluss für Etappe 2 durchführen: ausschließlich `index.html`, `docs/stages/02-szenengesten.md` und die zugehörige `STATUS.md`-Dokumentation stagen; `AGENTS.md` bleibt unbeteiligt.
+Etappe 3 `Sichtbares Füttern` erst nach erneutem Arbeitsauftrag beginnen. Vorher sind `agents/06-implementation.md`, die vier freigegebenen Planungsdokumente, `docs/stages/02-szenengesten.md` und `docs/stages/03-sichtbares-fuettern.md` vollständig zu lesen; anschließend ist der Status auf `In Bearbeitung` zu setzen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -242,8 +254,9 @@ GitHub-Abschluss für Etappe 2 durchführen: ausschließlich `index.html`, `docs
 - Die Phase `Funktions- und UI-Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `0c42dd3dc88c7009ad86cc2796e1764fb55e1e09` auf GitHub abgeschlossen.
 - Die Phase `Technischer Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf GitHub abgeschlossen.
 - Der Implementierungsplan ist freigegeben und mit dem Ergebnis-Commit `55dfe1f794e5b4e63888248cfe5e55c59a11899b` auf GitHub verfügbar; die vier Etappen sind `01-lebendige-grundszene`, `02-szenengesten`, `03-sichtbares-fuettern` und `04-robuste-uebergabe`.
-- Nächste Aktion: GitHub-Abschluss für Etappe 02; die persönliche Abnahme vom 2026-08-21 ist dokumentiert.
-- Erforderliche Eingaben für die nächste Etappe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md` und `docs/stages/01-lebendige-grundszene.md`.
+- Etappe 02 ist mit Ergebnis-Commit `66d7dca993906c5e80735a3fc256df36dc4c4c11` und diesem nachgelagerten Status-Commit auf GitHub abgeschlossen.
+- Nächste Rollendatei: `agents/06-implementation.md`.
+- Erforderliche Eingaben für die nächste Etappe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md`, `docs/stages/02-szenengesten.md` und `docs/stages/03-sichtbares-fuettern.md`.
 - GitHub Pages ist für die finale Veröffentlichung festgelegt: `index.html` aus `main` und `/ (root)`; die tatsächliche Aktivierung und URL-Prüfung gehören zur Release-Phase.
 - Die GitHub-Pages-Vorgabe wurde am 2026-08-20 direkt durch den Entwickler ergänzt; bei einem weiterhin privaten Repository ist vor Aktivierung die von GitHub angebotene Sichtbarkeitsoption zu prüfen und erforderlichenfalls erneut bestätigen zu lassen.
 

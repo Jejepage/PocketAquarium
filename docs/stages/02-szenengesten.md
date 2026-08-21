@@ -2,7 +2,7 @@
 
 ## Status und Freigabe
 
-- Status: Bereit zum GitHub-Abschluss
+- Status: Abgeschlossen
 - Freigabe: ausstehend
 
 ## Ziel und sichtbares Ergebnis
@@ -98,4 +98,8 @@ Zusätzliche statische Prüfung: `git diff --check` war erfolgreich. `rg` bestä
 
 ## GitHub-Abschluss
 
-Noch nicht bearbeitet.
+- Ergebnis-Commit: `66d7dca993906c5e80735a3fc256df36dc4c4c11` (`feat(stage-02): add scene gestures`).
+- Branch und Zielbranch: `main` nach `main`.
+- Push und Integration: am 2026-08-21 per SSH nach `origin/main` gepusht und mit `git ls-remote --heads origin main` bestätigt.
+- Pull Request: Nicht verwendet.
+- Abschlussdokumentation: folgt mit dem nachgelagerten Status-Commit auf `main`; dessen eigene Commit-ID wird nicht selbstreferenziell dokumentiert.
