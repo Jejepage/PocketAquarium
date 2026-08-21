@@ -176,6 +176,7 @@ Release 1.0.0 nach persönlicher Abnahme über GitHub Pages aus `main` und `/ (r
 
 ## GitHub-Stand
 
+- Release 1.0.0: lokaler Dokumentations-Commit `921fb3a` (`docs(release): record 1.0.0 approval`) ist noch nicht auf GitHub verfügbar; Push, Pages-Aktivierung, Tag und Release bleiben blockiert.
 - Branch: `main`; Zielbranch: `main`
 - Ergebnis-Commit: `328956be9c6c7b2a0f08d6fc6085b86dd5ee867e` (`feat(stage-04): harden aquarium handoff`)
 - Letzter Ergebnis-Push: 2026-08-21; auf GitHub per `git ls-remote --heads origin main` bestätigt
