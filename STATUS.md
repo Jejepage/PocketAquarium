@@ -14,19 +14,19 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Implementierung – Etappe 2: Szenengesten
+Prüfung – Etappe 2: Szenengesten
 
 ## Status
 
-Nicht begonnen
+Bereit zum GitHub-Abschluss
 
 ## Zuletzt aktualisiert
 
-2026-08-20 – Etappe 01 abgeschlossen und Übergabe an Etappe 02 vorbereitet
+2026-08-21 – Etappe 02 persönlich angenommen; GitHub-Abschluss wird durchgeführt
 
 ## Aktueller Auftrag
 
-Etappe 2 `Szenengesten` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Etappendatei umsetzen.
+Etappe 2 `Szenengesten` auf GitHub abschließen.
 
 ## Erforderliche Eingangsdokumente
 
@@ -38,6 +38,7 @@ Etappe 2 `Szenengesten` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Et
 
 ## Erledigt
 
+- Etappe 02 `Szenengesten` implementiert: einheitliche Pointer-Eingabe mit Capture und Abbruchbereinigung, sichtbare Neugier, sichtbares Ausweichen sowie neue Zufallsfische bis zum festen Limit sechs
 - Workflow-Grundlage bereitgestellt
 - Projektname als `PocketAquarium` bestätigt
 - Zielplattform und Lieferform als browserbasierte Einzeldatei-Anwendung festgelegt
@@ -64,7 +65,7 @@ Etappe 2 `Szenengesten` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Et
 
 ## Offen
 
-- Etappe 2 erst nach einem erneuten Arbeitsauftrag beginnen
+- GitHub-Abschluss für Etappe 2 durchführen.
 
 ## Bekannte Probleme oder Blocker
 
@@ -72,7 +73,9 @@ Etappe 2 `Szenengesten` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Et
 
 ## Laufende Arbeit
 
-- Kein aktiver Implementierungsauftrag. Ausgangsstand für Etappe 02 ist der integrierte GitHub-Stand von Etappe 01.
+- Die Wiederholungsprüfung hat F-02 als behoben bestätigt: Der Entwickler-Test auf iPhone belegt alle drei Touch-Gesten, die erneute Desktop-Prüfung mit Maus belegt den alternativen Eingabeweg, Gestenreaktionen und das Limit von sechs Fischen. Es gibt keine offenen relevanten Befunde.
+- Der Entwickler hat Etappe 02 am 2026-08-21 nach eigener iPhone-Prüfung angenommen; es gibt keine akzeptierten Einschränkungen.
+- Der Arbeitsbranch bleibt gemäß dem bisherigen Projektstand `main`; die Änderung an `AGENTS.md` ist eine unbeteiligte Entwickleränderung und bleibt unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 
 ## Wichtige Entscheidungen oder Planänderungen
@@ -88,6 +91,13 @@ Etappe 2 `Szenengesten` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Et
 
 ## Ausgeführte Prüfungen
 
+- Etappe 02, unabhängige Prüfung: Codex In-app Browser auf Desktop: kurze Mausaktivierung, Ziehen und drei Doppelklicks bis zum Limit sechs bestanden; zusätzlicher Doppelklick folgenlos, keine Konsolenwarnungen oder -fehler
+- Etappe 02, unabhängige Prüfung: AC-F03-04 nicht bestanden (F-02, Mittel), weil kein echter Touch- oder Trackpad-Pointer verfügbar war; 390 × 844 CSS-Pixel belegen nur das Layout, nicht die Eingabeart
+- Etappe 02, Korrektur: Entwickler-Test am 2026-08-21 auf iPhone meldet alle drei Touch-Gesten als erfolgreich; zusammen mit der bestehenden Desktop-Mausprüfung ist F-02 zur Wiederholungsprüfung behoben
+- Etappe 02, unabhängige Wiederholungsprüfung: Codex In-app Browser auf Desktop: kurze Mausaktivierung, Ziehen, drei Doppelklicks bis sechs Fische und weiterer folgenloser Doppelklick bestanden; Neugier- und Ausweichmarkierungen mit sichtbarer Fischbewegung, keine Konsolenwarnungen oder -fehler
+- Etappe 02, unabhängige Wiederholungsprüfung: kleine Ansicht 390 × 844 CSS-Pixel blieb mit drei Fischen, Umgebungsbewegung und sichtbarem Button lesbar; der tatsächliche iPhone-Test vom 2026-08-21 ergänzt den Touch-Nachweis
+- Etappe 02, unabhängige Prüfung: Pointer-Ereigniswege, Capture, `pointercancel` und Fischlimit sechs per Quellprüfung geprüft; `git diff --check` erfolgreich
+- Etappe 02: Lokales HTML Tidy unterstützt die verwendete HTML5-Syntax nicht; `node` ist nicht installiert. Erfolgreiches Browser-Laden ohne Konsolenfehler ist als Laufzeitnachweis dokumentiert
 - Etappe 01: Getrennte Prüfung im Codex In-app Browser auf 1280 × 720 und 390 × 844 durchgeführt; Szene, drei unterschiedlich bewegte Fische, Blasen, Pflanzen und Partikel in beiden Größen sichtbar und lesbar
 - Etappe 01: Browser-Konsole auf Warnungen und Fehler geprüft; keine Treffer
 - Etappe 01: Responsive Größenprüfung: sichtbare Canvas-Fläche 1096 × 558 CSS-Pixel bei 1280 × 720 sowie 366 × 658 CSS-Pixel bei 390 × 844, ohne leere oder unlesbare Szene
@@ -218,7 +228,7 @@ Etappe 2 `Szenengesten` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Et
 
 ## Nächster Schritt
 
-Etappe 2 `Szenengesten` erst nach erneutem Arbeitsauftrag beginnen. Vorher sind `agents/06-implementation.md`, die vier freigegebenen Planungsdokumente und `docs/stages/02-szenengesten.md` vollständig zu lesen; anschließend ist der Status auf `In Bearbeitung` zu setzen.
+GitHub-Abschluss für Etappe 2 durchführen: ausschließlich `index.html`, `docs/stages/02-szenengesten.md` und die zugehörige `STATUS.md`-Dokumentation stagen; `AGENTS.md` bleibt unbeteiligt.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -232,7 +242,7 @@ Etappe 2 `Szenengesten` erst nach erneutem Arbeitsauftrag beginnen. Vorher sind 
 - Die Phase `Funktions- und UI-Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `0c42dd3dc88c7009ad86cc2796e1764fb55e1e09` auf GitHub abgeschlossen.
 - Die Phase `Technischer Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf GitHub abgeschlossen.
 - Der Implementierungsplan ist freigegeben und mit dem Ergebnis-Commit `55dfe1f794e5b4e63888248cfe5e55c59a11899b` auf GitHub verfügbar; die vier Etappen sind `01-lebendige-grundszene`, `02-szenengesten`, `03-sichtbares-fuettern` und `04-robuste-uebergabe`.
-- Nächste Rollendatei: `agents/06-implementation.md`.
+- Nächste Aktion: GitHub-Abschluss für Etappe 02; die persönliche Abnahme vom 2026-08-21 ist dokumentiert.
 - Erforderliche Eingaben für die nächste Etappe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md` und `docs/stages/01-lebendige-grundszene.md`.
 - GitHub Pages ist für die finale Veröffentlichung festgelegt: `index.html` aus `main` und `/ (root)`; die tatsächliche Aktivierung und URL-Prüfung gehören zur Release-Phase.
 - Die GitHub-Pages-Vorgabe wurde am 2026-08-20 direkt durch den Entwickler ergänzt; bei einem weiterhin privaten Repository ist vor Aktivierung die von GitHub angebotene Sichtbarkeitsoption zu prüfen und erforderlichenfalls erneut bestätigen zu lassen.
