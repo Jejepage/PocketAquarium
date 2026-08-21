@@ -22,7 +22,7 @@ Blockiert
 
 ## Zuletzt aktualisiert
 
-2026-08-21 – Release 1.0.0 persönlich freigegeben; Veröffentlichung durch GitHub-Verbindung und ungültige Anmeldung blockiert
+2026-08-21 – Release 1.0.0 persönlich freigegeben und auf GitHub gepusht; Veröffentlichung durch GitHub-Pages-Tarif für das private Repository blockiert
 
 ## Aktueller Auftrag
 
@@ -65,15 +65,15 @@ Release 1.0.0 nach persönlicher Abnahme über GitHub Pages aus `main` und `/ (r
 
 ## Offen
 
-- Vollständige Browsermatrix, GitHub-Pages-Veröffentlichung und Prüfung der veröffentlichten URL stehen aus; zur Veröffentlichung sind eine funktionierende GitHub-Verbindung und eine gültige Anmeldung erforderlich.
+- Vollständige Browsermatrix, GitHub-Pages-Veröffentlichung und Prüfung der veröffentlichten URL stehen aus. Für die Veröffentlichung ist eine Entscheidung zur Repository-Sichtbarkeit oder zu einem alternativen Hostingweg erforderlich.
 
 ## Bekannte Probleme oder Blocker
 
-- GitHub Pages kann nicht aktiviert werden: `github.com` ist per DNS nicht auflösbar und `gh auth status` meldet für `Jejepage` ein ungültiges Token.
+- GitHub Pages kann für das private Repository im aktuellen Tarif nicht aktiviert werden: Der API-Aufruf für `main` und `/ (root)` wurde am 2026-08-21 mit `HTTP 422` abgelehnt.
 
 ## Laufende Arbeit
 
-- Release 1.0.0 ist persönlich freigegeben, aber blockiert, bis GitHub-Verbindung und -Anmeldung wiederhergestellt sind.
+- Release 1.0.0 ist persönlich freigegeben und auf `origin/main` gepusht, aber blockiert, bis der Entwickler die Repository-Sichtbarkeit ändert oder einen alternativen Hostingweg vorgibt.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
@@ -95,7 +95,7 @@ Release 1.0.0 nach persönlicher Abnahme über GitHub Pages aus `main` und `/ (r
 - Release 1.0.0, statisch: `git diff --check` erfolgreich; Suche in `index.html` nach externen URLs, Netzwerk- und Speicherzugriffen, Cookies und offensichtlichen Geheimnisbezeichnern ohne Treffer.
 - Release 1.0.0, lokaler Desktop-Smoke-Test im Codex In-App-Browser: Aquariumansicht und Button sichtbar; Fütterungssperre und Reaktivierung sowie kurze Aktivierung, Ziehen und Doppelklick bestätigt; keine Konsolenwarnungen oder -fehler.
 - Release 1.0.0, Browsermatrix: Safari und Chrome sind lokal installiert, Edge und Firefox fehlen. Die zugesagte Evergreen-Matrix wurde deshalb nicht vollständig ausgeführt. Ein 390 × 844-Viewport zeigte Canvas und Button im DOM; die automatisierte Canvas-Messung lief in einen Locator-Timeout.
-- Release 1.0.0, Veröffentlichungsvoraussetzung: `gh auth status` meldet ein ungültiges Token; `git ls-remote --heads origin main` scheiterte wegen fehlender DNS-Auflösung von `github.com`. Pages-Konfiguration, aktueller Remote-Stand und Veröffentlichung sind dadurch noch nicht prüf- oder ausführbar.
+- Release 1.0.0, GitHub: Anmeldung erfolgreich geprüft; die Dokumentationscommits `921fb3a` und `17841b0` per SSH auf `origin/main` gepusht. Der Pages-Abruf meldete zunächst keine bestehende Website; Aktivierung aus `main` und `/ (root)` wurde mit `HTTP 422` abgelehnt, weil der aktuelle Tarif Pages für dieses private Repository nicht unterstützt.
 
 - Etappe 04, Implementierungsprüfung: `git diff --check` erfolgreich; statische Suche in `index.html` nach externen URLs, Speicherung, Netzwerkanfragen, Geheimnissen und Abhängigkeitseinbindungen ohne Treffer.
 - Etappe 04, Browser-Smoke-Test auf Desktop (Canvas 1100 × 561,6 CSS-Pixel): sichtbarer, per Tabulator fokussierter Button; Fütterungssperre und Reaktivierung, Maus-Kurzaktivierung, Ziehen und Doppelklick ausgeführt; Konsole ohne Warnungen oder Fehler.
@@ -176,7 +176,7 @@ Release 1.0.0 nach persönlicher Abnahme über GitHub Pages aus `main` und `/ (r
 
 ## GitHub-Stand
 
-- Release 1.0.0: lokaler Dokumentations-Commit `921fb3a` (`docs(release): record 1.0.0 approval`) ist noch nicht auf GitHub verfügbar; Push, Pages-Aktivierung, Tag und Release bleiben blockiert.
+- Release 1.0.0: Dokumentationscommits `921fb3a` (`docs(release): record 1.0.0 approval`) und `17841b0` (`docs(release): record publication blocker`) am 2026-08-21 per SSH auf `origin/main` gepusht. Pages-Aktivierung, Tag und GitHub Release bleiben wegen des Pages-Tarifblockers aus.
 - Branch: `main`; Zielbranch: `main`
 - Ergebnis-Commit: `328956be9c6c7b2a0f08d6fc6085b86dd5ee867e` (`feat(stage-04): harden aquarium handoff`)
 - Letzter Ergebnis-Push: 2026-08-21; auf GitHub per `git ls-remote --heads origin main` bestätigt
