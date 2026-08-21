@@ -14,19 +14,19 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Prüfung – Etappe 3: Sichtbares Füttern
+Implementierung – Etappe 4: Robuste Übergabe
 
 ## Status
 
-Bereit zum GitHub-Abschluss
+Abgeschlossen
 
 ## Zuletzt aktualisiert
 
-2026-08-21 – Wiederholungsprüfung bestanden und persönlich auf iPhone abgenommen
+2026-08-21 – Etappe 03 auf GitHub abgeschlossen; Übergabe an Etappe 04 vorbereitet
 
 ## Aktueller Auftrag
 
-Etappe 3 nach bestandener Wiederholungsprüfung und persönlicher Abnahme auf GitHub abschließen.
+Etappe 4 `Robuste Übergabe` nach einem neuen Arbeitsauftrag gemäß ihrer Etappendatei umsetzen.
 
 ## Erforderliche Eingangsdokumente
 
@@ -65,7 +65,7 @@ Etappe 3 nach bestandener Wiederholungsprüfung und persönlicher Abnahme auf Gi
 
 ## Offen
 
-- GitHub-Abschluss von Etappe 03.
+- Etappe 4 erst nach einem neuen Arbeitsauftrag beginnen.
 
 ## Bekannte Probleme oder Blocker
 
@@ -73,7 +73,7 @@ Etappe 3 nach bestandener Wiederholungsprüfung und persönlicher Abnahme auf Gi
 
 ## Laufende Arbeit
 
-- Implementierung von Etappe 03 ist bereit zur unabhängigen Prüfung. Geändert wurden `index.html`, `docs/stages/03-sichtbares-fuettern.md` und dieser Status.
+- Kein aktiver Implementierungsauftrag. Ausgangsstand für Etappe 04 ist der integrierte GitHub-Stand von Etappe 03.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
@@ -165,11 +165,24 @@ Etappe 3 nach bestandener Wiederholungsprüfung und persönlicher Abnahme auf Gi
 ## GitHub-Stand
 
 - Branch: `main`; Zielbranch: `main`
-- Ergebnis-Commit: `66d7dca993906c5e80735a3fc256df36dc4c4c11` (`feat(stage-02): add scene gestures`)
+- Ergebnis-Commit: `b551198cb2f12b5ab4acd0d4df0e6e7d3429decf` (`feat(stage-03): add visible feeding`)
 - Letzter Ergebnis-Push: 2026-08-21; auf GitHub per `git ls-remote --heads origin main` bestätigt
 - Phasen- oder Etappenabschluss auf GitHub: Ergebnisstand verfügbar; Abschlussdokumentation wird mit diesem nachgelagerten Commit auf `main` gepusht (dessen eigene Commit-ID nicht selbstreferenziell dokumentiert wird)
 - Pull Request: Nicht verwendet
 - Bekannte Einschränkungen: Keine für den Phasenabschluss; Produktannahmen bleiben in `docs/idea-validation.md` dokumentiert
+
+## Abgeschlossener Abschnitt
+
+- Abschnitt: Etappe 03 `Sichtbares Füttern`
+- Status: Abgeschlossen
+- Persönliche Freigabe: 2026-08-21, auf iPhone angenommen durch den Entwickler; keine akzeptierten Einschränkungen
+- Ergebnis-Commit: `b551198cb2f12b5ab4acd0d4df0e6e7d3429decf` (`feat(stage-03): add visible feeding`)
+- Branch und Zielbranch: `main` nach `main`
+- Push und Integration: 2026-08-21 per SSH auf `origin/main` gepusht und mit `git ls-remote --heads origin main` bestätigt
+- Pull Request: Nicht verwendet
+- Prüfungen: Nachweismatrix für AC-F04-01 und AC-F04-02, Desktop-Fokus und Tastatur, sichtbarer Fütterungsablauf, Sperre und Reaktivierung, Geste während Fütterung, iPhone-Touch-Nachweis, kleine Ansicht, Browserkonsole, statische Prüfung und `git diff --check`
+- Bekannte Einschränkungen: Keine
+- Nächster Abschnitt: `Implementierung – Etappe 4: Robuste Übergabe`; erforderliche Eingaben: die vier freigegebenen Planungsdokumente, `docs/stages/04-robuste-uebergabe.md` und der auf GitHub verfügbare Abschluss von Etappe 03
 
 ## Abgeschlossener Abschnitt
 
@@ -251,7 +264,7 @@ Etappe 3 nach bestandener Wiederholungsprüfung und persönlicher Abnahme auf Gi
 
 ## Nächster Schritt
 
-GitHub-Abschluss gemäß `GITHUB-ABSCHLUSSPROTOKOLL.md`: nur `index.html`, `docs/stages/03-sichtbares-fuettern.md` und `STATUS.md` als Etappe-03-Ergebnis committen und per SSH auf `origin/main` pushen; danach Abschlussdokumentation mit Übergang zu `Implementierung – Etappe 4: Robuste Übergabe` committen und pushen.
+Etappe 4 `Robuste Übergabe` erst nach einem neuen Arbeitsauftrag beginnen. Vorher sind `agents/06-implementation.md`, die vier freigegebenen Planungsdokumente und `docs/stages/04-robuste-uebergabe.md` vollständig zu lesen; anschließend ist der Status auf `In Bearbeitung` zu setzen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -266,8 +279,9 @@ GitHub-Abschluss gemäß `GITHUB-ABSCHLUSSPROTOKOLL.md`: nur `index.html`, `docs
 - Die Phase `Technischer Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf GitHub abgeschlossen.
 - Der Implementierungsplan ist freigegeben und mit dem Ergebnis-Commit `55dfe1f794e5b4e63888248cfe5e55c59a11899b` auf GitHub verfügbar; die vier Etappen sind `01-lebendige-grundszene`, `02-szenengesten`, `03-sichtbares-fuettern` und `04-robuste-uebergabe`.
 - Etappe 02 ist mit Ergebnis-Commit `66d7dca993906c5e80735a3fc256df36dc4c4c11` und diesem nachgelagerten Status-Commit auf GitHub abgeschlossen.
-- Nächste Rollendatei: `agents/07-review-and-testing.md`.
-- Erforderliche Eingaben für die nächste Aufgabe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md`, `docs/stages/03-sichtbares-fuettern.md` sowie Befund F-03 mit iPhone-Nachweis.
+- Etappe 03 ist mit Ergebnis-Commit `b551198cb2f12b5ab4acd0d4df0e6e7d3429decf` und diesem nachgelagerten Status-Commit auf GitHub abgeschlossen.
+- Nächste Rollendatei: `agents/06-implementation.md`.
+- Erforderliche Eingaben für die nächste Aufgabe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md` und `docs/stages/04-robuste-uebergabe.md`.
 - GitHub Pages ist für die finale Veröffentlichung festgelegt: `index.html` aus `main` und `/ (root)`; die tatsächliche Aktivierung und URL-Prüfung gehören zur Release-Phase.
 - Die GitHub-Pages-Vorgabe wurde am 2026-08-20 direkt durch den Entwickler ergänzt; bei einem weiterhin privaten Repository ist vor Aktivierung die von GitHub angebotene Sichtbarkeitsoption zu prüfen und erforderlichenfalls erneut bestätigen zu lassen.
 

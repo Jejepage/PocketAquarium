@@ -83,4 +83,8 @@ Am 2026-08-21 persönlich durch den Entwickler auf dem iPhone abgenommen; keine 
 
 ## GitHub-Abschluss
 
-Ausstehend: erst nach bestandener unabhängiger Prüfung und persönlicher Abnahme.
+- Branch und Zielbranch: `main` nach `main`
+- Ergebnis-Commit: `b551198cb2f12b5ab4acd0d4df0e6e7d3429decf` (`feat(stage-03): add visible feeding`)
+- Push und Integration: 2026-08-21 per SSH auf `origin/main` gepusht und mit `git ls-remote --heads origin main` bestätigt
+- Pull Request: Nicht verwendet
+- Bekannte Einschränkungen: Keine
