@@ -18,11 +18,11 @@ Release
 
 ## Status
 
-In Bearbeitung
+Abgeschlossen
 
 ## Zuletzt aktualisiert
 
-2026-08-21 – Release 1.0.0 über GitHub Pages veröffentlicht und per HTTPS geprüft; GitHub-Abschluss läuft
+2026-08-21 – Release 1.0.0 über GitHub Pages veröffentlicht, per HTTPS geprüft und auf GitHub abgeschlossen
 
 ## Aktueller Auftrag
 
@@ -65,7 +65,7 @@ Release 1.0.0 nach persönlicher Abnahme über GitHub Pages aus `main` und `/ (r
 
 ## Offen
 
-- Vollständige Browsermatrix bleibt als dokumentierte Einschränkung offen; Git-Tag, GitHub Release und finaler GitHub-Abschluss stehen aus.
+- Keine. Die unvollständige Browsermatrix ist als bekannte Einschränkung im Release-Dokument festgehalten.
 
 ## Bekannte Probleme oder Blocker
 
@@ -73,7 +73,7 @@ Release 1.0.0 nach persönlicher Abnahme über GitHub Pages aus `main` und `/ (r
 
 ## Laufende Arbeit
 
-- Release 1.0.0 ist über GitHub Pages veröffentlicht und per HTTPS geprüft; GitHub-Abschluss wird dokumentiert.
+- Kein aktiver Auftrag. Release 1.0.0 ist über GitHub Pages veröffentlicht, per HTTPS geprüft und auf GitHub abgeschlossen.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
@@ -177,7 +177,7 @@ Release 1.0.0 nach persönlicher Abnahme über GitHub Pages aus `main` und `/ (r
 
 ## GitHub-Stand
 
-- Release 1.0.0: Dokumentationscommits `921fb3a`, `17841b0` und `6aee656` am 2026-08-21 per SSH auf `origin/main` gepusht. GitHub Pages läuft unter `https://jejepage.github.io/PocketAquarium/`; Tag, GitHub Release und finaler Status-Push folgen.
+- Release 1.0.0: GitHub Pages läuft unter `https://jejepage.github.io/PocketAquarium/`. Der veröffentlichte Artefakt-Commit `6aee6561586cafc2430ce3ab888db0a80345357f` ist mit `v1.0.0` getaggt; GitHub Release: https://github.com/Jejepage/PocketAquarium/releases/tag/v1.0.0. Diese Abschlussdokumentation wird mit einem nachgelagerten Commit auf `origin/main` gepusht.
 - Branch: `main`; Zielbranch: `main`
 - Ergebnis-Commit: `328956be9c6c7b2a0f08d6fc6085b86dd5ee867e` (`feat(stage-04): harden aquarium handoff`)
 - Letzter Ergebnis-Push: 2026-08-21; auf GitHub per `git ls-remote --heads origin main` bestätigt
