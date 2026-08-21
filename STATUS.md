@@ -14,19 +14,19 @@ App-Projekt
 
 ## Aktuelle Phase
 
-Implementierung – Etappe 3: Sichtbares Füttern
+Prüfung – Etappe 3: Sichtbares Füttern
 
 ## Status
 
-Nicht begonnen
+Bereit zum GitHub-Abschluss
 
 ## Zuletzt aktualisiert
 
-2026-08-21 – Etappe 02 auf GitHub abgeschlossen; Übergabe an Etappe 03 vorbereitet
+2026-08-21 – Wiederholungsprüfung bestanden und persönlich auf iPhone abgenommen
 
 ## Aktueller Auftrag
 
-Etappe 3 `Sichtbares Füttern` erst nach einem erneuten Arbeitsauftrag gemäß ihrer Etappendatei umsetzen.
+Etappe 3 nach bestandener Wiederholungsprüfung und persönlicher Abnahme auf GitHub abschließen.
 
 ## Erforderliche Eingangsdokumente
 
@@ -65,15 +65,16 @@ Etappe 3 `Sichtbares Füttern` erst nach einem erneuten Arbeitsauftrag gemäß i
 
 ## Offen
 
-- Etappe 3 erst nach einem erneuten Arbeitsauftrag beginnen.
+- GitHub-Abschluss von Etappe 03.
 
 ## Bekannte Probleme oder Blocker
 
-- Keine
+- Keine.
 
 ## Laufende Arbeit
 
-- Kein aktiver Implementierungsauftrag. Ausgangsstand für Etappe 03 ist der integrierte GitHub-Stand von Etappe 02.
+- Implementierung von Etappe 03 ist bereit zur unabhängigen Prüfung. Geändert wurden `index.html`, `docs/stages/03-sichtbares-fuettern.md` und dieser Status.
+- Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 - Die bereits vorhandene Änderung an `AGENTS.md` bleibt unbeteiligt und unverändert.
 
@@ -90,6 +91,16 @@ Etappe 3 `Sichtbares Füttern` erst nach einem erneuten Arbeitsauftrag gemäß i
 
 ## Ausgeführte Prüfungen
 
+- Etappe 03, unabhängige Wiederholungsprüfung: F-03 anhand des iPhone-Nachweises als behoben bestätigt; der zuvor unabhängig ausgeführte Desktop-Regressionstest (Fokus, Fütterungsablauf, Sperre, Reaktivierung, Geste während Fütterung, Konsole) und die statische Prüfung sind ohne Produktcode-Änderung weiterhin gültig. Keine relevanten Befunde offen.
+- Etappe 03, persönliche Abnahme: Entwickler bestätigt am 2026-08-21 auf iPhone, dass alles in Ordnung ist; keine akzeptierten Einschränkungen.
+- Etappe 03, Korrektur F-03: Entwickler-Test auf iPhone am 2026-08-21 meldet den vollständigen Fütterungsablauf ohne Auffälligkeiten: sichtbarer und auslösbarer Button, sinkendes Futter, zielgerichtete Fischbewegung, schrittweises Fressen, Sperre während der Fütterung und Reaktivierung danach. Keine Produktcode-Änderung erforderlich.
+- Etappe 03, unabhängige Prüfung: Codex In-app Browser auf Desktop (1280 × 720 CSS-Pixel): Button `Füttern` sichtbar, per Tabulator fokussiert, sichtbare 3-px-Fokuskontur und programmatische Beschriftung bestätigt; Klick zeigte sinkende Futterpartikel, zielgerichtete Fischbewegung und schrittweise Verringerung. Sperre während der Fütterung, erzwungener Parallelversuch, Ziehen während der Fütterung, Wiederaktivierung und erneute Fütterung bestanden; Konsole ohne Warnungen oder Fehler.
+- Etappe 03, unabhängige Prüfung: 390 × 844 CSS-Pixel: Aquarium, Fische und dauerhaft sichtbarer Button blieben lesbar. Die Testumgebung erzeugte nur Maus-Eingaben; sie liefert keinen echten Touch-Nachweis.
+- Etappe 03, unabhängige statische Prüfung: `git diff --check` erfolgreich; nativer Button, exklusiver Futterzustand, Deaktivierung/Wiederaktivierung sowie keine externen Ressourcen, Speicherzugriffe oder Netzwerkanfragen bestätigt.
+- Etappe 03, Implementierungsprüfung: Codex In-app Browser auf Desktop: sichtbarer Button `Füttern`, sichtbarer Fokus, zwölf sinkende Futterpartikel, ein hin schwimmender Fisch, schrittweise Verringerung und Reaktivierung nach Abschluss beobachtet; während der Reaktion war der Button deaktiviert und die Konsole ohne Warnungen oder Fehler
+- Etappe 03, Implementierungsprüfung: erneute Fütterung nach Abschluss erfolgreich; Ziehen während einer Fütterung erzeugte keine Konsolenfehler. Der Touch-Nachweis steht für die unabhängige Prüfung aus.
+- Etappe 03, statische Implementierungsprüfung: `git diff --check` erfolgreich; Quellprüfung bestätigt nativen beschrifteten Button, exklusiven Futterzustand, Sperre gegen paralleles Futter, Wiederaktivierung sowie keine externen URLs, Speicherzugriffe oder Netzwerkanfragen
+- Etappe 03: `tidy -qe index.html` ist wegen der lokal installierten veralteten HTML-Tidy-Version nicht als HTML5-Syntaxprüfung nutzbar; Browser-Laufzeitprüfung war erfolgreich
 - Etappe 02, unabhängige Prüfung: Codex In-app Browser auf Desktop: kurze Mausaktivierung, Ziehen und drei Doppelklicks bis zum Limit sechs bestanden; zusätzlicher Doppelklick folgenlos, keine Konsolenwarnungen oder -fehler
 - Etappe 02, unabhängige Prüfung: AC-F03-04 nicht bestanden (F-02, Mittel), weil kein echter Touch- oder Trackpad-Pointer verfügbar war; 390 × 844 CSS-Pixel belegen nur das Layout, nicht die Eingabeart
 - Etappe 02, Korrektur: Entwickler-Test am 2026-08-21 auf iPhone meldet alle drei Touch-Gesten als erfolgreich; zusammen mit der bestehenden Desktop-Mausprüfung ist F-02 zur Wiederholungsprüfung behoben
@@ -240,7 +251,7 @@ Etappe 3 `Sichtbares Füttern` erst nach einem erneuten Arbeitsauftrag gemäß i
 
 ## Nächster Schritt
 
-Etappe 3 `Sichtbares Füttern` erst nach erneutem Arbeitsauftrag beginnen. Vorher sind `agents/06-implementation.md`, die vier freigegebenen Planungsdokumente, `docs/stages/02-szenengesten.md` und `docs/stages/03-sichtbares-fuettern.md` vollständig zu lesen; anschließend ist der Status auf `In Bearbeitung` zu setzen.
+GitHub-Abschluss gemäß `GITHUB-ABSCHLUSSPROTOKOLL.md`: nur `index.html`, `docs/stages/03-sichtbares-fuettern.md` und `STATUS.md` als Etappe-03-Ergebnis committen und per SSH auf `origin/main` pushen; danach Abschlussdokumentation mit Übergang zu `Implementierung – Etappe 4: Robuste Übergabe` committen und pushen.
 
 ## Übergabehinweise für den nächsten Agenten
 
@@ -255,8 +266,8 @@ Etappe 3 `Sichtbares Füttern` erst nach erneutem Arbeitsauftrag beginnen. Vorhe
 - Die Phase `Technischer Plan` ist persönlich freigegeben und mit dem Ergebnis-Commit `fd8522d1fae502153ef20d7525a4ab59c1e3ba5d` auf GitHub abgeschlossen.
 - Der Implementierungsplan ist freigegeben und mit dem Ergebnis-Commit `55dfe1f794e5b4e63888248cfe5e55c59a11899b` auf GitHub verfügbar; die vier Etappen sind `01-lebendige-grundszene`, `02-szenengesten`, `03-sichtbares-fuettern` und `04-robuste-uebergabe`.
 - Etappe 02 ist mit Ergebnis-Commit `66d7dca993906c5e80735a3fc256df36dc4c4c11` und diesem nachgelagerten Status-Commit auf GitHub abgeschlossen.
-- Nächste Rollendatei: `agents/06-implementation.md`.
-- Erforderliche Eingaben für die nächste Etappe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md`, `docs/stages/02-szenengesten.md` und `docs/stages/03-sichtbares-fuettern.md`.
+- Nächste Rollendatei: `agents/07-review-and-testing.md`.
+- Erforderliche Eingaben für die nächste Aufgabe: freigegebene `docs/product-requirements.md`, `docs/functional-plan.md`, `docs/technical-plan.md`, `docs/implementation-plan.md`, `docs/stages/03-sichtbares-fuettern.md` sowie Befund F-03 mit iPhone-Nachweis.
 - GitHub Pages ist für die finale Veröffentlichung festgelegt: `index.html` aus `main` und `/ (root)`; die tatsächliche Aktivierung und URL-Prüfung gehören zur Release-Phase.
 - Die GitHub-Pages-Vorgabe wurde am 2026-08-20 direkt durch den Entwickler ergänzt; bei einem weiterhin privaten Repository ist vor Aktivierung die von GitHub angebotene Sichtbarkeitsoption zu prüfen und erforderlichenfalls erneut bestätigen zu lassen.
 

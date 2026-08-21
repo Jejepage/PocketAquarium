@@ -2,7 +2,7 @@
 
 ## Status und Freigabe
 
-- Status: Geplant
+- Status: Bestanden; persönlich abgenommen
 - Freigabe: ausstehend
 
 ## Ziel und sichtbares Ergebnis
@@ -51,20 +51,36 @@ Beide Kriterien sind auf Touch und Desktop nachgewiesen, Fokus und Bezeichnung s
 
 ## Umsetzungsergebnis
 
-Noch nicht bearbeitet.
+- `index.html` enthält nun einen nativen, dauerhaft sichtbaren Button **Füttern** mit sichtbarem Fokus und programmatischem Namen.
+- Die Aktivierung erzeugt zwölf sichtbare Futterpartikel. Sie sinken langsam und werden durch einen gewählten Fisch in einem deutlich getrennten Rhythmus gefressen.
+- Während sichtbares Futter vorhanden ist, ist die Fütterung exklusiv: Der Button ist deaktiviert und wird erst nach dem letzten Bissen wieder aktiviert.
+- Der Futterfisch hat Vorrang vor Neugier. Ein unmittelbar ausgelöstes Ausweichen bleibt bestehen; danach übernimmt der Futterpfad wieder das Ziel des Fisches.
 
 ## Abweichungen und neue Erkenntnisse
 
-Noch nicht bearbeitet.
+Keine. Der Fressrhythmus von 220 ms pro Partikel ist ein reversibles Umsetzungsdetail, damit die sichtbare Verringerung eindeutig beobachtbar bleibt.
 
 ## Prüfnachweise
 
-Noch nicht bearbeitet.
+| Kriterium | Status | Prüfung und Umgebung | Nachweis oder Beobachtung |
+|---|---|---|---|
+| AC-F04-01 | Bestanden | Entwickler-Test auf iPhone, 2026-08-21; Desktop-Wiederholungsnachweis liegt vor | Der Entwickler meldet den vollständig erfolgreichen iPhone-Test: Die sichtbare Schaltfläche **Füttern** war erreichbar und auslösbar. Der Desktop-Nachweis bestätigt zusätzlich Beschriftung, Tabulatorfokus und 3-px-Fokuskontur. |
+| AC-F04-02 | Bestanden | Entwickler-Test auf iPhone, 2026-08-21; Desktop-Wiederholungsnachweis liegt vor | Der Entwickler meldet den vollständig erfolgreichen iPhone-Ablauf: sichtbares sinkendes Futter, zielgerichtete Fischbewegung, schrittweise Verringerung, Sperre während der Fütterung und Reaktivierung danach. Der Desktop-Nachweis bestätigt denselben Ablauf ohne Konsolenwarnungen oder -fehler. |
+
+Zusätzliche unabhängige Prüfungen: Die Ansicht blieb bei 390 × 844 CSS-Pixeln lesbar; Button, Fische und Umgebungsbewegung waren sichtbar. `git diff --check` war erfolgreich. Die statische Prüfung bestätigte Button, Futterzustand, Deaktivierung und Wiederaktivierung sowie das Fehlen von externen URLs, Speicherzugriffen und Netzwerkanfragen. Die Browserkonsole blieb bei allen Desktop-Prüfungen ohne Warnungen oder Fehler. `tidy -qe index.html` kann wegen der lokal verfügbaren, veralteten HTML-Tidy-Version nicht als HTML5-Syntaxprüfung verwendet werden; es erkennt unter anderem `main` und `canvas` nicht.
+
+## Befunde
+
+- **F-03 – Mittel – AC-F04-01 und AC-F04-02 – Behoben:** Der verpflichtende Touch-Nachweis fehlte zunächst. Der Entwickler meldete am 2026-08-21 den vollständigen iPhone-Test ohne Auffälligkeiten: Beschriftung und Aktivierung, sinkendes Futter, zielgerichtete Fischbewegung, schrittweises Fressen, Sperre und Reaktivierung waren erfolgreich. Es war keine Produktcode-Änderung erforderlich.
+
+## Gesamturteil
+
+**Bestanden.** F-03 ist durch den iPhone-Test behoben; der unabhängige Desktop-Regressionstest und die statische Prüfung bestätigen den unveränderten Fütterungsablauf. Keine relevanten Befunde sind offen.
 
 ## Persönliche Abnahme
 
-Noch nicht bearbeitet.
+Am 2026-08-21 persönlich durch den Entwickler auf dem iPhone abgenommen; keine Einschränkungen akzeptiert.
 
 ## GitHub-Abschluss
 
-Noch nicht bearbeitet.
+Ausstehend: erst nach bestandener unabhängiger Prüfung und persönlicher Abnahme.

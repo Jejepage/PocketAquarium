@@ -21,7 +21,7 @@
   <body>
     <main aria-label="PocketAquarium">
       <canvas id="aquarium" aria-label="Animierte Aquariumansicht mit schwimmenden Fischen" role="img"></canvas>
-      <div class="controls"><button id="feed" type="button" disabled title="Fütterung folgt in einer späteren Etappe">Füttern</button></div>
+      <div class="controls"><button id="feed" type="button">Füttern</button></div>
       <p id="notice" class="notice" hidden></p>
     </main>
     <script>
@@ -49,7 +49,7 @@
           ],
           bubbles: Array.from({ length: 10 }, (_, i) => ({ x: .07 + ((i * 37) % 86) / 100, y: (i * 19 % 100) / 100, size: 3 + i % 4, speed: .025 + i % 3 * .008 })),
           particles: Array.from({ length: 34 }, (_, i) => ({ x: (i * 31 % 100) / 100, y: (i * 47 % 100) / 100, drift: .008 + i % 4 * .003, phase: i })),
-          gesture: null, pendingTap: null
+          gesture: null, pendingTap: null, food: null
         };
 
         function clamp(value, minimum, maximum) { return Math.max(minimum, Math.min(maximum, value)); }
@@ -91,6 +91,24 @@
           if (state.fish.length < MAX_FISH) state.fish.push(makeFish());
         }
 
+        function feedFish() {
+          if (state.food) return;
+          const x = .35 + Math.random() * .3;
+          state.food = {
+            particles: Array.from({ length: 12 }, (_, index) => ({ x: x + (index % 4 - 1.5) * .018, y: .16 + Math.floor(index / 4) * .012, eaten: false })),
+            eater: null, nextBiteAt: performance.now()
+          };
+          feedButton.disabled = true;
+        }
+
+        function foodTarget() {
+          const visible = state.food.particles.filter(particle => !particle.eaten);
+          return {
+            x: visible.reduce((total, particle) => total + particle.x, 0) / visible.length,
+            y: visible.reduce((total, particle) => total + particle.y, 0) / visible.length
+          };
+        }
+
         function resize() {
           const rect = canvas.getBoundingClientRect();
           const scale = Math.min(window.devicePixelRatio || 1, 2);
@@ -126,7 +144,7 @@
           if (fish.behavior === 'idle') return;
           const x = fish.targetX * state.width, y = fish.targetY * state.height;
           context.save();
-          context.strokeStyle = fish.behavior === 'curious' ? '#fff4a9cc' : '#d7f6ffbb';
+          context.strokeStyle = fish.behavior === 'curious' ? '#fff4a9cc' : fish.behavior === 'feeding' ? '#ffcf72' : '#d7f6ffbb';
           context.lineWidth = 2;
           context.setLineDash([5, 6]);
           context.beginPath(); context.arc(x, y, fish.behavior === 'curious' ? 16 : 12, 0, Math.PI * 2); context.stroke();
@@ -134,7 +152,30 @@
         }
 
         function update(dt) {
+          if (state.food) {
+            for (const particle of state.food.particles) if (!particle.eaten) particle.y = Math.min(.76, particle.y + .055 * dt);
+            const target = foodTarget();
+            if (!state.food.eater) state.food.eater = state.fish.reduce((closest, fish) => Math.hypot(fish.x - target.x, fish.y - target.y) < Math.hypot(closest.x - target.x, closest.y - target.y) ? fish : closest);
+            const eater = state.food.eater;
+            const fleeing = eater.behavior === 'fleeing' && performance.now() < eater.behaviorUntil;
+            if (!fleeing) {
+              eater.behavior = 'feeding'; eater.targetX = target.x; eater.targetY = target.y;
+              const dx = target.x - eater.x, dy = target.y - eater.y, distance = Math.hypot(dx, dy);
+              if (distance > .012) {
+                eater.x += dx / distance * Math.min(distance, .36 * dt);
+                eater.y += dy / distance * Math.min(distance, .36 * dt);
+                eater.direction = dx >= 0 ? 1 : -1;
+              } else if (performance.now() >= state.food.nextBiteAt) {
+                const bite = state.food.particles.find(particle => !particle.eaten);
+                if (bite) { bite.eaten = true; state.food.nextBiteAt = performance.now() + 220; }
+              }
+            }
+            if (state.food.particles.every(particle => particle.eaten)) {
+              eater.behavior = 'idle'; state.food = null; feedButton.disabled = false;
+            }
+          }
           for (const fish of state.fish) {
+            if (state.food && fish === state.food.eater && fish.behavior === 'feeding') continue;
             if (fish.behavior !== 'idle' && performance.now() < fish.behaviorUntil) {
               const dx = fish.targetX - fish.x, dy = fish.targetY - fish.y;
               const distance = Math.hypot(dx, dy);
@@ -166,6 +207,15 @@
           for (const bubble of state.bubbles) { context.strokeStyle = '#d8ffffaa'; context.lineWidth = 1.5; context.beginPath(); context.arc(bubble.x * width, bubble.y * height, bubble.size, 0, Math.PI * 2); context.stroke(); }
           drawPlant(width * .12, height * .87, height * .28, time * .001); drawPlant(width * .86, height * .88, height * .34, time * .0012 + 2); drawPlant(width * .7, height * .9, height * .19, time * .0009 + 5);
           state.fish.forEach(drawReaction); state.fish.forEach(fish => drawFish(fish, time * .001));
+          if (state.food) {
+            for (const particle of state.food.particles) {
+              if (particle.eaten) continue;
+              context.fillStyle = '#f3c46b';
+              context.beginPath(); context.arc(particle.x * width, particle.y * height, 4, 0, Math.PI * 2); context.fill();
+              context.strokeStyle = '#fff0b6'; context.lineWidth = 1;
+              context.beginPath(); context.arc(particle.x * width, particle.y * height, 4, 0, Math.PI * 2); context.stroke();
+            }
+          }
         }
 
         function frame(time) { const dt = Math.min((time - state.lastTime) / 1000 || 0, .05); state.lastTime = time; update(dt); render(time); requestAnimationFrame(frame); }
@@ -207,8 +257,8 @@
         });
         canvas.addEventListener('pointercancel', clearGesture);
         window.addEventListener('blur', clearGesture);
+        feedButton.addEventListener('click', feedFish);
         new ResizeObserver(resize).observe(canvas); resize(); requestAnimationFrame(frame);
-        // Die sichtbare, native Fütterungsaktion wird in Etappe 03 aktiviert.
       })();
     </script>
   </body>
